@@ -5,7 +5,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{FC973D6E-0A07-468D-99DF-7F145DD50603}</ProjectGuid>
+    <ProjectGuid>{39B2EF35-B09E-4CD4-A44E-37E8ED43CCF4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>REST.Tests</RootNamespace>
@@ -102,7 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\REST\REST.csproj">
-      <Project>{5043A64D-A066-4BAC-B69D-7149795D8ABF}</Project>
+      <Project>{2D3991E6-B984-4161-8DEA-ECF4F608A09B}</Project>
       <Name>REST</Name>
     </ProjectReference>
   </ItemGroup>
