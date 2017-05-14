@@ -32,12 +32,6 @@ namespace REST.Models
 
         public int Ap_No { get; set; }
 
-        public int Phone_No { get; set; }
-
-        [Required]
-        [StringLength(25)]
-        public string E_Mail { get; set; }
-
         [Column(TypeName = "date")]
         public DateTime M_In { get; set; }
 

@@ -8,9 +8,8 @@ namespace REST.Models
     public partial class DataContext : DbContext
     {
         public DataContext()
-            : base("name=DatabaseContext")
+            : base("name=DataContext")
         {
-            base.Configuration.ProxyCreationEnabled = false;
         }
 
         public virtual DbSet<Apartment> Apartments { get; set; }
@@ -18,6 +17,7 @@ namespace REST.Models
         public virtual DbSet<Facility> Facilities { get; set; }
         public virtual DbSet<Message> Messages { get; set; }
         public virtual DbSet<Resident> Residents { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -32,6 +32,14 @@ namespace REST.Models
 
             modelBuilder.Entity<Apartment>()
                 .Property(e => e.Uploaded_Doc_Name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Apartment>()
+                .Property(e => e.Ap_Address)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Building>()
+                .Property(e => e.Address)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Building>()
@@ -67,10 +75,6 @@ namespace REST.Models
                 .IsFixedLength();
 
             modelBuilder.Entity<Resident>()
-                .Property(e => e.E_Mail)
-                .IsFixedLength();
-
-            modelBuilder.Entity<Resident>()
                 .HasMany(e => e.Messages)
                 .WithRequired(e => e.Resident)
                 .HasForeignKey(e => e.Sent_To)
@@ -85,6 +89,18 @@ namespace REST.Models
             modelBuilder.Entity<User>()
                 .Property(e => e.Username)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<User>()
+                .Property(e => e.Password)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<User>()
+                .Property(e => e.EMail)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<User>()
+                .Property(e => e.Phone_No)
+                .IsFixedLength();
         }
     }
 }
