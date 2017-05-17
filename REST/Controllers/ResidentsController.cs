@@ -9,13 +9,13 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
-using REST.Models;
+using REST;
 
 namespace REST.Controllers
 {
     public class ResidentsController : ApiController
     {
-        private DataContext db = new DataContext();
+        private DatabaseContext db = new DatabaseContext();
 
         // GET: api/Residents
         public IQueryable<Resident> GetResidents()

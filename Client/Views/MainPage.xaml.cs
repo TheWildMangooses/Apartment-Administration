@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Client.Views;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -26,6 +27,8 @@ namespace Client
         {
         
             this.InitializeComponent();
+            Frame frame = new Frame();
+            frame.Navigate(typeof(Login));
         }
     }
 }

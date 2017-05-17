@@ -1,4 +1,4 @@
-namespace REST.Models
+namespace REST
 {
     using System;
     using System.Collections.Generic;
@@ -28,9 +28,13 @@ namespace REST.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int R_No { get; set; }
 
-        public bool IsAdmin { get; set; }
-
         public int Ap_No { get; set; }
+
+        public int Phone_No { get; set; }
+
+        [Required]
+        [StringLength(25)]
+        public string E_Mail { get; set; }
 
         [Column(TypeName = "date")]
         public DateTime M_In { get; set; }
@@ -42,6 +46,8 @@ namespace REST.Models
 
         [Column(TypeName = "image")]
         public byte[] Picture { get; set; }
+
+        public virtual Apartment Apartment { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Message> Messages { get; set; }

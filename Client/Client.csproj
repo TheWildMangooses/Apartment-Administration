@@ -93,10 +93,11 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="API\APIController.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\Class1.cs" />
+    <Compile Include="Model\GenericUserModel.cs" />
     <Compile Include="Views\AccountCreationBoardMember.xaml.cs">
       <DependentUpon>AccountCreationBoardMember.xaml</DependentUpon>
     </Compile>
@@ -197,6 +198,9 @@
     <PackageReference Include="HockeySDK.UWP">
       <Version>4.1.3</Version>
     </PackageReference>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client">
+      <Version>5.2.3</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>5.2.3</Version>
     </PackageReference>
@@ -205,6 +209,8 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="Handlers\" />
     <Folder Include="View-Models\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="8fd8375f-493b-4de1-a67d-d3e00dc70ea7" name="Resident Registration" linkedPackageId="52544aff-df3d-4d9b-a16d-ed46f704ea74" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="2f245c17-b0dd-4934-8a2d-c4d0dfd7cbab">
+      <profileInstance Id="bbcf0790-1173-487a-a609-5b0a2546ba71" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="75b6232f-f682-4eca-9c39-8dbf2f981b17">
+      <profileInstance Id="743cc349-f067-4217-a3ae-8c1decb36e19" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="9cfd3c5a-2743-4012-b64d-3c9428650d55" name="Registration" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="18569add-5cb4-4d87-a7ae-2621204b8d77" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="fe3ae361-7980-464b-a4f9-3e46c1b957d8" name="User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="20038310-b11d-4f56-83cc-30e98430e74a" />
+        <targetEnds>
+          <association Id="53b7be7f-b533-4276-8d0a-4307eef2569a" isDerived="false" sourceEndRoleName="User" targetEndRoleName="User fills the boxes" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="43fd348d-5742-4017-9f13-227410baf40a" LastKnownName="User fills the boxes" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4e05d38d-195d-4ae1-b051-ea0ffae8627a" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a35c9088-777e-43bc-bf0c-e901aff49aad" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5f32c6e3-669a-4f9b-b771-e0640bdfbe47" name="User fills the boxes" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2d056167-546f-4e8c-b72b-7fe39b19d900" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a499fc4c-5cd0-4716-9f1a-6a7cd2a0f5f6" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="068963dc-1531-48c7-b2b3-0ca8b2173445" name="Resident Registration" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="281195bd-7c4b-4e15-a6a5-9732532bf18d" />
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="43fd348d-5742-4017-9f13-227410baf40a" name="User fills the boxes" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cf7aeff8-bc9c-4536-bdd9-03960d9a7261" />
+        <subjects>
+          <subsystemMoniker Id="9cfd3c5a-2743-4012-b64d-3c9428650d55" LastKnownName="Registration" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="2006e1d5-7dcb-4412-acf9-2c5962a97a70" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f0afe597-af73-409d-8541-cb86f56e61ed" />
+        <subjects>
+          <subsystemMoniker Id="9cfd3c5a-2743-4012-b64d-3c9428650d55" LastKnownName="Registration" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="52544aff-df3d-4d9b-a16d-ed46f704ea74" name="UPAnalysisOstbanehus">
+    <elementDefinition Id="693932f1-ffc9-4e07-b5af-e807937cb4c5" />
+  </package>
+</useCaseModelRoot>

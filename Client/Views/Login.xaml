@@ -15,7 +15,7 @@
         <StackPanel Margin="304,10,309,98" Orientation="Vertical" Grid.Row="1" Padding="0,17,0,0">
             <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="270"/>
             <PasswordBox HorizontalAlignment="Left" Password="@@@@@@@2" VerticalAlignment="Center" Width="270" Margin="0,18,0,4"/>
-            <Button Content="Login" HorizontalAlignment="Left" Margin="75,23,0,15" VerticalAlignment="Center" Height="40" Width="127" Foreground="White"/>
+            <Button Content="Login" HorizontalAlignment="Left" Margin="10,23,0,15" VerticalAlignment="Center" Height="40" Width="250" Foreground="White"></Button>
             <HyperlinkButton Content="Reset my password" HorizontalAlignment="Left" Margin="77,0,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
 
         </StackPanel>

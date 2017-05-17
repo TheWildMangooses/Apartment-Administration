@@ -1,4 +1,4 @@
-namespace REST.Models
+namespace REST
 {
     using System;
     using System.Collections.Generic;
@@ -8,6 +8,8 @@ namespace REST.Models
 
     public partial class Facility
     {
+        public int Ap_No { get; set; }
+
         [Required]
         [StringLength(25)]
         public string F_Name { get; set; }
@@ -37,8 +39,6 @@ namespace REST.Models
         public int Id { get; set; }
 
         public int? F_Value { get; set; }
-
-        public int? Ap_No { get; set; }
 
         public virtual Apartment Apartment { get; set; }
     }

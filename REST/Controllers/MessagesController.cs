@@ -9,13 +9,13 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
-using REST.Models;
+using REST;
 
 namespace REST.Controllers
 {
     public class MessagesController : ApiController
     {
-        private DataContext db = new DataContext();
+        private DatabaseContext db = new DatabaseContext();
 
         // GET: api/Messages
         public IQueryable<Message> GetMessages()

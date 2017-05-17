@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="b4f4aa60-fe7d-46b2-b8fe-519e581a12fb" name="Logout Use Case" linkedPackageId="366b0cf4-3b1b-47e7-b5c6-cb01b72e0267" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="917a0729-8ef5-43b6-ab67-1724bec5fd67" name="User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1161214d-1b34-4c60-82e4-00980de925f6" />
+        <targetEnds>
+          <association Id="b977fc5b-1dce-4e1f-aa99-784afff77c71" isDerived="false" sourceEndRoleName="Resident" targetEndRoleName="Provide Login Details" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="5e636486-56e8-4881-8508-0a867b037ae5" LastKnownName="Logout Button" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a2bec5f9-c810-43c4-b848-9de91aa3c2cc" name="Resident" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3c684907-830b-417f-91be-488bf839de03" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5847d900-9f78-44df-8bf2-01ec5822a1e6" name="Provide Login Details" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="01b3067c-4aca-45be-8064-f449cd413171" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0c394c5e-a11f-49b8-8f8a-dee662630fdd" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="31d0ddd1-4b24-490f-b95f-5e7b404a1d96" name="Logout" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="bdab1f0e-6a6e-468f-9277-cdbb851b9eca" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="5e636486-56e8-4881-8508-0a867b037ae5" name="Logout Button" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e1d8f0d0-7704-4f6e-998f-944b138d1eae" />
+        <targetEnds>
+          <association Id="ef46190b-67fd-4493-84fa-1c8d79c8a370" isDerived="false" sourceEndRoleName="Logout Button" targetEndRoleName="Confirmation Popup" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="09e5ea47-5aa1-4560-a33d-d76473b3ea41" LastKnownName="Confirmation Popup" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="85488bb6-36e2-4342-bfe8-a9a30bca7943" name="Logout Button" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a515b7b5-2109-4e61-a41e-21cf3a919357" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="47182ee8-c949-4e76-8cda-233b62db9af4" name="Confirmation Popup" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ec0e1843-f059-42cb-86c2-ba3e8111d7d4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="fd9f1e97-0f0c-48af-b061-98854bc74cb7" />
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker Id="31d0ddd1-4b24-490f-b95f-5e7b404a1d96" LastKnownName="Logout" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c89b56c9-fbe9-4917-b3aa-8e4ad12b07eb" name="Logout" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e626a67b-18bb-48b4-ba70-591262cf8191" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="09e5ea47-5aa1-4560-a33d-d76473b3ea41" name="Confirmation Popup" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e1fc66ad-17c8-48ef-838c-206e317eb099" />
+        <targetEnds>
+          <association Id="2ca50584-8008-4948-aca2-4f69bb728152" isDerived="false" sourceEndRoleName="Confirmation Popup" targetEndRoleName="Logout" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="09dfcc10-7425-4da6-ac71-f3a31e06668a" LastKnownName="Logout" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="919c21e1-d642-47d2-bd45-386a9c619fe5" name="Confirmation Popup" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4331334e-0554-4318-8056-0e5daa2318ca" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c60e52d5-8e62-4aab-bd7c-46c13353dea2" name="Logout" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="735766f2-767c-4e82-8ab1-21ef226deaba" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="aecfa388-e483-49ae-853b-3a2e7bde8106" />
+          </association>
+          <association Id="4dd645d5-24fa-4349-9647-eb4eb0080b94" isDerived="false" sourceEndRoleName="Confirmation Popup" targetEndRoleName="Cancel" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1c7e3682-e978-41cd-8789-7fcfc1bae6bc" LastKnownName="Cancel" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fa976906-df29-4255-a256-42ed8572994f" name="Confirmation Popup" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a57aa0e2-2380-4415-8407-b75b583c00e3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a0211702-d400-4fdb-b9fa-6a9f29fbbe01" name="Cancel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="acff418a-cda7-4a75-a461-8acb9f6bec6a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d0687fbd-2b03-4734-8431-44d00601bfe8" />
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker Id="31d0ddd1-4b24-490f-b95f-5e7b404a1d96" LastKnownName="Logout" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="09dfcc10-7425-4da6-ac71-f3a31e06668a" name="Logout" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="718021d1-a3eb-41a7-84ba-b11d2dbe80d9" />
+        <targetEnds>
+          <association Id="adb98b33-f413-4fcb-bf00-3cebe8fd0bcf" isDerived="false" sourceEndRoleName="Logout" targetEndRoleName="Login Page" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="76cee4de-1689-4508-84ab-92d3d4d7a60b" LastKnownName="User fills the boxes" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ac28760f-7e96-4d15-86c8-a3518ed06b3a" name="Logout" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0f8b3150-6520-46d9-b6a3-92cc1babb48d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6fc6c185-6b91-438a-b761-a709bf22cff4" name="Login Page" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6b35dd88-1294-4193-80cd-1c3e97be862a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d6d4aa3d-aa67-4400-8686-88f8d1a22f8d" />
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker Id="31d0ddd1-4b24-490f-b95f-5e7b404a1d96" LastKnownName="Logout" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="1c7e3682-e978-41cd-8789-7fcfc1bae6bc" name="Cancel" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3d9e7b4a-c74a-4a9e-9f46-fe1e7189b8d5" />
+        <subjects>
+          <subsystemMoniker Id="31d0ddd1-4b24-490f-b95f-5e7b404a1d96" LastKnownName="Logout" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <useCase Id="76cee4de-1689-4508-84ab-92d3d4d7a60b" name="User fills the boxes" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cf7aeff8-bc9c-4536-bdd9-03960d9a7261" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="366b0cf4-3b1b-47e7-b5c6-cb01b72e0267" name="UPAnalysisOstbanehus">
+    <elementDefinition Id="693932f1-ffc9-4e07-b5af-e807937cb4c5" />
+    <profileInstances>
+      <packageHasProfileInstances Id="5437fa68-4f0a-4be0-99d0-caabbfd52e88">
+        <profileInstance Id="57512156-83a8-4cd5-b853-e198c045b24c" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="1af8ee33-ccf1-40b2-b9a4-f4319e153369">
+        <profileInstance Id="f9905f3f-3f8f-4c4f-af36-9c28a784a702" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

@@ -1,130 +1,130 @@
-﻿@model REST.Models.Apartment
+﻿@model REST.Apartment
 
 @{
-    ViewBag.Title = "Details";
+    Layout = null;
 }
 
-<h2>Details</h2>
+<!DOCTYPE html>
 
-<div>
-    <h4>Apartment</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Apartments1.Number)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Apartments1.Number)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Building.D_Pipe_C)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Building.D_Pipe_C)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.IsFree)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.IsFree)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Floor)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Floor)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Number)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Number)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Size)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Size)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.No_Rooms)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.No_Rooms)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.BBR)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BBR)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Fordelingstal)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Fordelingstal)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Ap_Drawing)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Ap_Drawing)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Rent)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Rent)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Uploaded_Doc)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Uploaded_Doc)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Uploaded_Doc_Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Uploaded_Doc_Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Uploaded_Doc_Date)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Uploaded_Doc_Date)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Ap_No }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Apartment</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Building.B_No)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Building.B_No)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.IsFree)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.IsFree)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Floor)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Floor)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Number)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Number)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Size)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Size)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.No_Rooms)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.No_Rooms)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.BBR)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.BBR)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Fordelingstal)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Fordelingstal)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Ap_Drawing)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Ap_Drawing)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Rent)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Rent)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Uploaded_Doc)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Uploaded_Doc)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Uploaded_Doc_Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Uploaded_Doc_Name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Uploaded_Doc_Date)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Uploaded_Doc_Date)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Ap_No }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

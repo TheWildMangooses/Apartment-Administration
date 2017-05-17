@@ -1,4 +1,4 @@
-namespace REST.Models
+namespace REST
 {
     using System;
     using System.Collections.Generic;

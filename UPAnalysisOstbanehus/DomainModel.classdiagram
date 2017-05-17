@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="e4ae6b4e-7cd6-44be-83cf-c69991c8f35a" name="DomainModel" linkedPackageId="a0d591b4-b2bd-48a3-905d-c750aae6535d" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f9863d0e-006d-4783-bf3b-937efb2284f9" name="Resident" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8c6c0447-4828-4d81-b76b-225d576ff987" />
+        <ownedAttributesInternal>
+          <property Id="2dbaa6f5-03c9-45e3-8ee7-82f57e7b717e" name="Attribute1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8e11db93-1200-4e3c-a7e6-eebeaceb096a" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="a0d591b4-b2bd-48a3-905d-c750aae6535d" name="UPAnalysisOstbanehus">
+    <elementDefinition Id="693932f1-ffc9-4e07-b5af-e807937cb4c5" />
+    <profileInstances>
+      <packageHasProfileInstances Id="0280f255-44bb-44e5-8b91-9d7e086a8c68">
+        <profileInstance Id="344d1005-c8bf-47d6-be96-81ffc731ffaa" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="37c64176-c592-485b-8b20-1ada74f0789e">
+        <profileInstance Id="5d2ba56d-5499-4f4f-a0f2-af8085ea845a" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

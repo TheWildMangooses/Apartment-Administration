@@ -1,0 +1,2188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
+  dslVersion="1.0.0.0"
+  Id="693932f1-ffc9-4e07-b5af-e807937cb4c5"
+  name="UPAnalysisOstbanehus" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="95e4d6e4-5ab9-4114-9761-8a14bfb84c2f" />
+    <comment
+      Id="d6a3258b-e205-4986-b9bd-266ed7ea077b" />
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="8c6c0447-4828-4d81-b76b-225d576ff987"
+        name="Resident"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="8e11db93-1200-4e3c-a7e6-eebeaceb096a"
+            name="Attribute1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="42d3ad90-0238-4185-a488-e6552b936932"
+        name="Login"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="20038310-b11d-4f56-83cc-30e98430e74a"
+        name="User"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="7cf47268-9cb5-4ea2-85d3-450fb9c8c70b"
+            isDerived="false"
+            sourceEndRoleName="Resident"
+            targetEndRoleName="Provide Login Details"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="fa6187d1-4f6e-4c41-9722-cf58900afb99"
+              LastKnownName="Provide Login Details"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e1fe4b1b-e9d9-4feb-b48d-7ce0d676b39f"
+                  name="Resident"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d898ea0e-a75d-4f5c-9ca6-95ae4b7f00f6"
+                  name="Provide Login Details"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a499fc4c-5cd0-4716-9f1a-6a7cd2a0f5f6"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="User fills the boxes"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="cf7aeff8-bc9c-4536-bdd9-03960d9a7261"
+              LastKnownName="User fills the boxes"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a35c9088-777e-43bc-bf0c-e901aff49aad"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2d056167-546f-4e8c-b72b-7fe39b19d900"
+                  name="User fills the boxes"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="fa618c8c-c83e-4ce1-b875-308c976abf62"
+        name="Class1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="4fc00a0d-3cf2-4a7a-ac0d-13abbe483501"
+        name="Login"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="fa6187d1-4f6e-4c41-9722-cf58900afb99"
+        name="Provide Login Details"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="d8b82047-dad6-4914-a64b-d87a00c592ca"
+            isDerived="false"
+            sourceEndRoleName="Provide Login Details"
+            targetEndRoleName="Valid Details"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a85d5e22-463c-4337-a962-83ede9772779"
+              LastKnownName="Valid Details"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="afd1caff-0bc8-40cd-bb6e-971b14c7884b"
+                  name="Provide Login Details"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="776fccc0-3089-480a-b68e-19508af1cb06"
+                  name="Valid Details"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ee9e19aa-5b72-4f76-b73b-4dad5f915fbb"
+            isDerived="false"
+            sourceEndRoleName="Provide Login Details"
+            targetEndRoleName="Invalid Details"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="05ca3955-c0ed-463c-b16a-b4eb70fe4a14"
+              LastKnownName="Invalid Details"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6a322b60-2f39-48bf-b6f2-90eab93aeaf7"
+                  name="Provide Login Details"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="25100ffb-2bf7-4fc4-9135-189bd0cf6942"
+                  name="Invalid Details"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker
+            Id="4fc00a0d-3cf2-4a7a-ac0d-13abbe483501"
+            LastKnownName="Login"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a6feb081-389a-4b8a-826b-b3df9afb3f20"
+        name="Resident View"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a85d5e22-463c-4337-a962-83ede9772779"
+        name="Valid Details"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="149c22bf-e1c3-4baa-9de8-631204478362"
+            isDerived="false"
+            sourceEndRoleName="Valid Details"
+            targetEndRoleName="Check User Role"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3ec1f3de-9cc2-4c19-bfc1-75e1b5dd54c6"
+              LastKnownName="Check User Role"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="890db5b8-6ab7-4d22-8fd5-32c2ebc0c37d"
+                  name="Valid Details"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1ff1f70b-54b2-4053-9499-1a4ccffb3970"
+                  name="Check User Role"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker
+            Id="4fc00a0d-3cf2-4a7a-ac0d-13abbe483501"
+            LastKnownName="Login"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="05ca3955-c0ed-463c-b16a-b4eb70fe4a14"
+        name="Invalid Details"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="33dff83b-9f51-4bd3-9744-b5e9b11b88e6"
+            isDerived="false"
+            sourceEndRoleName="Invalid Details"
+            targetEndRoleName="Alert User - Invalid Login Details"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="6e6585a0-72fd-4394-b89d-6e89b01c7407"
+              LastKnownName="UI Message - Invalid Details"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="66d18625-d626-4bbc-838e-74b9556ea665"
+                  name="Invalid Details"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2a06e5e2-8b1f-48cb-8af6-0e5f3e2c0b28"
+                  name="Alert User - Invalid Login Details"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker
+            Id="4fc00a0d-3cf2-4a7a-ac0d-13abbe483501"
+            LastKnownName="Login"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6e6585a0-72fd-4394-b89d-6e89b01c7407"
+        name="UI Message - Invalid Details"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="5201d8db-0ef0-4840-b3ce-3844455f610d">
+            <useCaseMoniker
+              Id="e46e68da-76ce-4a28-a9be-5bdbb1a309e7"
+              LastKnownName="Reset Password"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <description>Displays the Reset Password option.</description>
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="4fc00a0d-3cf2-4a7a-ac0d-13abbe483501"
+            LastKnownName="Login"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="281195bd-7c4b-4e15-a6a5-9732532bf18d"
+        name="Resident Registration"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="98274db2-4c1b-4b1c-a1af-824de8fbc011"
+        name="Main Resident View1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="dc7f910b-9ba8-412e-9d58-7824d0736e72"
+        name="Board Login Page"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="48900541-81f7-4627-9666-9489638144e4"
+        name="Provide Login Details1"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="2277093e-e3a6-4220-9ba7-d3201cf8ede3"
+            isDerived="false"
+            sourceEndRoleName="Provide Login Details"
+            targetEndRoleName="Valid Details"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="91d6244b-a701-4b42-a5cf-3d9d177289f3"
+              LastKnownName="Valid Details1"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4d13ad01-23e0-4be7-a812-68a12a4c04e6"
+                  name="Provide Login Details"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="18d0e405-4208-4fe1-8e43-893c0c80f4a8"
+                  name="Valid Details"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="1114c652-2dcc-4960-814d-104f8e8a3027"
+            isDerived="false"
+            sourceEndRoleName="Provide Login Details"
+            targetEndRoleName="Invalid Details"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="010f8f75-b52c-4977-8de5-903aa4220f37"
+              LastKnownName="Invalid Details1"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cf73f86c-c977-4c34-8f22-d012a8f17644"
+                  name="Provide Login Details"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="74f667b5-8f08-4a8a-aef2-05a3e988508c"
+                  name="Invalid Details"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker
+            Id="dc7f910b-9ba8-412e-9d58-7824d0736e72"
+            LastKnownName="Board Login Page"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="91d6244b-a701-4b42-a5cf-3d9d177289f3"
+        name="Valid Details1"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="ac9cc134-3611-4038-b0f5-7bcdff8d0c5a"
+            isDerived="false"
+            sourceEndRoleName="Valid Details"
+            targetEndRoleName="Main Resident View"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="98274db2-4c1b-4b1c-a1af-824de8fbc011"
+              LastKnownName="Main Resident View1"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ebfe4fad-addd-47af-a561-49fd0b53d93f"
+                  name="Valid Details"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f660f1ac-c86b-48d9-9a7a-a7aaf64deb8d"
+                  name="Main Resident View"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker
+            Id="dc7f910b-9ba8-412e-9d58-7824d0736e72"
+            LastKnownName="Board Login Page"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="010f8f75-b52c-4977-8de5-903aa4220f37"
+        name="Invalid Details1"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="b8b5c274-079a-416f-a690-3153be68e907"
+            isDerived="false"
+            sourceEndRoleName="Invalid Details"
+            targetEndRoleName="Alert User - Invalid Login Details"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="cec34ab5-a1ed-4b81-9138-b30a7d6e37e4"
+              LastKnownName="UI Message - Invalid Details1"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="09e90a78-66bc-428b-879a-71a17b8f1acd"
+                  name="Invalid Details"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="80525f2e-9edc-4add-9122-7d32287b9c09"
+                  name="Alert User - Invalid Login Details"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker
+            Id="dc7f910b-9ba8-412e-9d58-7824d0736e72"
+            LastKnownName="Board Login Page"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="cec34ab5-a1ed-4b81-9138-b30a7d6e37e4"
+        name="UI Message - Invalid Details1"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="dc7f910b-9ba8-412e-9d58-7824d0736e72"
+            LastKnownName="Board Login Page"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3ec1f3de-9cc2-4c19-bfc1-75e1b5dd54c6"
+        name="Check User Role"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="a7e4ab17-e0e2-4f57-bdec-8ddbf99cc2ef"
+            isDerived="false"
+            sourceEndRoleName="Check User Role"
+            targetEndRoleName="User is Resident"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3ed45ac8-8399-414c-8ae4-d96f39490cf2"
+              LastKnownName="User is Resident"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6de9252b-d489-4bb4-b8ee-c27c28cda032"
+                  name="Check User Role"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9aca7d92-903b-445b-bc03-adeb8d33a9de"
+                  name="User is Resident"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ff70554d-6a16-4d0f-8708-76d53f14e188"
+            isDerived="false"
+            sourceEndRoleName="Check User Role"
+            targetEndRoleName="User is Board Member"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="7a1e05ba-cf7c-41c4-a27b-c4a8871c35ee"
+              LastKnownName="User is Board Member"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a78b6105-7442-413c-a1e2-618b7b25bf99"
+                  name="Check User Role"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="be558ac6-1d88-4846-8492-99e7299af050"
+                  name="User is Board Member"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker
+            Id="4fc00a0d-3cf2-4a7a-ac0d-13abbe483501"
+            LastKnownName="Login"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3ed45ac8-8399-414c-8ae4-d96f39490cf2"
+        name="User is Resident"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="19d286aa-e846-4405-aa8f-7e7a7452a9e2"
+            isDerived="false"
+            sourceEndRoleName="User is Resident"
+            targetEndRoleName="Main Resident View"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a6feb081-389a-4b8a-826b-b3df9afb3f20"
+              LastKnownName="Resident View"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c770b2a0-c5e6-4e3b-9cee-82362619ed93"
+                  name="User is Resident"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d639b94d-ae82-45ba-bdc1-ae6629fbb018"
+                  name="Main Resident View"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker
+            Id="4fc00a0d-3cf2-4a7a-ac0d-13abbe483501"
+            LastKnownName="Login"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7a1e05ba-cf7c-41c4-a27b-c4a8871c35ee"
+        name="User is Board Member"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="3aba8826-d60d-4759-b49d-e129b83a9768"
+            isDerived="false"
+            sourceEndRoleName="User is Board Member"
+            targetEndRoleName="Main Board View"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b4bc991a-6ada-4750-af15-22e3f49d3cc5"
+              LastKnownName="Board View"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7874c865-37cb-42f6-aa46-5efa3cc83cbd"
+                  name="User is Board Member"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9df2ed6e-d643-4df0-b960-4532c753636e"
+                  name="Main Board View"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker
+            Id="4fc00a0d-3cf2-4a7a-ac0d-13abbe483501"
+            LastKnownName="Login"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b4bc991a-6ada-4750-af15-22e3f49d3cc5"
+        name="Board View"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="1161214d-1b34-4c60-82e4-00980de925f6"
+        name="User"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="0c394c5e-a11f-49b8-8f8a-dee662630fdd"
+            isDerived="false"
+            sourceEndRoleName="Resident"
+            targetEndRoleName="Provide Login Details"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e1d8f0d0-7704-4f6e-998f-944b138d1eae"
+              LastKnownName="Logout Button"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3c684907-830b-417f-91be-488bf839de03"
+                  name="Resident"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="01b3067c-4aca-45be-8064-f449cd413171"
+                  name="Provide Login Details"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="bdab1f0e-6a6e-468f-9277-cdbb851b9eca"
+        name="Logout"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e1d8f0d0-7704-4f6e-998f-944b138d1eae"
+        name="Logout Button"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="62dd025b-311e-4507-a364-21865fad3e6f"
+            isDerived="false"
+            sourceEndRoleName="Provide Login Details"
+            targetEndRoleName="Valid Details"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="44299c81-638d-464d-a237-68833043eb14"
+              LastKnownName="Valid Details2"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3ce81253-b8be-405d-80a1-fbdca046d789"
+                  name="Provide Login Details"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="362a6f4a-98f9-4716-8741-af5aab5006e0"
+                  name="Valid Details"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="551a50fd-bf2e-4744-aa5f-1110e439364a"
+            isDerived="false"
+            sourceEndRoleName="Provide Login Details"
+            targetEndRoleName="Invalid Details"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="8fb77f96-dce0-473b-b5de-aabd76f4e7ba"
+              LastKnownName="Invalid Details2"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="051eb967-6ad8-45b4-baf7-27a6ba4e2f33"
+                  name="Provide Login Details"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0ea0e9e9-1872-4ac3-b42c-053cd554c4b1"
+                  name="Invalid Details"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="fd9f1e97-0f0c-48af-b061-98854bc74cb7"
+            isDerived="false"
+            sourceEndRoleName="Logout Button"
+            targetEndRoleName="Confirmation Popup"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e1fc66ad-17c8-48ef-838c-206e317eb099"
+              LastKnownName="Confirmation Popup"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a515b7b5-2109-4e61-a41e-21cf3a919357"
+                  name="Logout Button"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ec0e1843-f059-42cb-86c2-ba3e8111d7d4"
+                  name="Confirmation Popup"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker
+            Id="bdab1f0e-6a6e-468f-9277-cdbb851b9eca"
+            LastKnownName="Logout"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="44299c81-638d-464d-a237-68833043eb14"
+        name="Valid Details2"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="e94bf355-205d-4e8c-8fc2-ea0d1726db8d"
+            isDerived="false"
+            sourceEndRoleName="Valid Details"
+            targetEndRoleName="Check User Role"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="5a2a4530-5b4b-4e31-9cf7-21b74090b0c2"
+              LastKnownName="Check User Role1"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9e01ecfd-103c-4d39-aadf-4a04d850854d"
+                  name="Valid Details"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="61a14df6-e1a2-43b3-9e40-23b75c68c4c2"
+                  name="Check User Role"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8fb77f96-dce0-473b-b5de-aabd76f4e7ba"
+        name="Invalid Details2"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="cad14373-d5c5-4c5e-ba27-a04e444764c2"
+            isDerived="false"
+            sourceEndRoleName="Invalid Details"
+            targetEndRoleName="Alert User - Invalid Login Details"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="be6b8966-63f5-4ee9-a692-596d38232202"
+              LastKnownName="UI Message - Invalid Details2"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3d5a938a-ba60-420f-b464-aa6ed01da7ea"
+                  name="Invalid Details"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b5fa909d-72ea-47bc-a388-06c483b6ee53"
+                  name="Alert User - Invalid Login Details"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="be6b8966-63f5-4ee9-a692-596d38232202"
+        name="UI Message - Invalid Details2"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="cf692568-1f92-49ec-9549-44abe2fbb686"
+            isDerived="false"
+            sourceEndRoleName="UI Message - Invalid Details"
+            targetEndRoleName="Resident 1"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="1161214d-1b34-4c60-82e4-00980de925f6"
+              LastKnownName="User"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e8ed5dd4-8bae-471e-bba2-a15a897bbe6b"
+                  name="UI Message - Invalid Details"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f806cbaa-6b6a-417d-933c-00728d32b10d"
+                  name="Resident 1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5a2a4530-5b4b-4e31-9cf7-21b74090b0c2"
+        name="Check User Role1"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="fcad646e-1cae-493b-98ad-08d51ed28cb4"
+            isDerived="false"
+            sourceEndRoleName="Check User Role"
+            targetEndRoleName="User is Resident"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="be93fc55-12fe-4370-835a-cdde876a1afa"
+              LastKnownName="User is Resident1"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fa7f3b93-5ebe-495f-93db-e53923920461"
+                  name="Check User Role"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="adffc62d-6c63-49dd-a780-6c6c3eb7c6b2"
+                  name="User is Resident"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="fc80442b-8ed1-483b-aebf-bf362fa9c497"
+            isDerived="false"
+            sourceEndRoleName="Check User Role"
+            targetEndRoleName="User is Board Member"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="1cbbb35d-842d-4a53-a703-7cc4956b787a"
+              LastKnownName="User is Board Member1"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8b535aa8-15bd-4c6a-b6bc-ab0f6d4afa73"
+                  name="Check User Role"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="310d9647-b6b1-4bf7-9bcd-fa10ad4db142"
+                  name="User is Board Member"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="be93fc55-12fe-4370-835a-cdde876a1afa"
+        name="User is Resident1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1cbbb35d-842d-4a53-a703-7cc4956b787a"
+        name="User is Board Member1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e626a67b-18bb-48b4-ba70-591262cf8191"
+        name="Logout"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e1fc66ad-17c8-48ef-838c-206e317eb099"
+        name="Confirmation Popup"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="aecfa388-e483-49ae-853b-3a2e7bde8106"
+            isDerived="false"
+            sourceEndRoleName="Confirmation Popup"
+            targetEndRoleName="Logout"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="718021d1-a3eb-41a7-84ba-b11d2dbe80d9"
+              LastKnownName="Logout"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4331334e-0554-4318-8056-0e5daa2318ca"
+                  name="Confirmation Popup"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="735766f2-767c-4e82-8ab1-21ef226deaba"
+                  name="Logout"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d0687fbd-2b03-4734-8431-44d00601bfe8"
+            isDerived="false"
+            sourceEndRoleName="Confirmation Popup"
+            targetEndRoleName="Cancel"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3d9e7b4a-c74a-4a9e-9f46-fe1e7189b8d5"
+              LastKnownName="Cancel"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a57aa0e2-2380-4415-8407-b75b583c00e3"
+                  name="Confirmation Popup"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="acff418a-cda7-4a75-a461-8acb9f6bec6a"
+                  name="Cancel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker
+            Id="bdab1f0e-6a6e-468f-9277-cdbb851b9eca"
+            LastKnownName="Logout"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="718021d1-a3eb-41a7-84ba-b11d2dbe80d9"
+        name="Logout"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="d6d4aa3d-aa67-4400-8686-88f8d1a22f8d"
+            isDerived="false"
+            sourceEndRoleName="Logout"
+            targetEndRoleName="Login Page"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="cf7aeff8-bc9c-4536-bdd9-03960d9a7261"
+              LastKnownName="User fills the boxes"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0f8b3150-6520-46d9-b6a3-92cc1babb48d"
+                  name="Logout"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6b35dd88-1294-4193-80cd-1c3e97be862a"
+                  name="Login Page"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker
+            Id="bdab1f0e-6a6e-468f-9277-cdbb851b9eca"
+            LastKnownName="Logout"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3d9e7b4a-c74a-4a9e-9f46-fe1e7189b8d5"
+        name="Cancel"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="bdab1f0e-6a6e-468f-9277-cdbb851b9eca"
+            LastKnownName="Logout"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="cf7aeff8-bc9c-4536-bdd9-03960d9a7261"
+        name="User fills the boxes"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="18569add-5cb4-4d87-a7ae-2621204b8d77"
+            LastKnownName="Registration"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e46e68da-76ce-4a28-a9be-5bdbb1a309e7"
+        name="Reset Password"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="601161a8-2b74-4193-87a4-eabfb7d9954a"
+            isDerived="false"
+            sourceEndRoleName="Reset Password"
+            targetEndRoleName="Insert Email"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f5e80856-d54c-4bce-8d98-0c51d31ef9fe"
+              LastKnownName="Insert Email"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d699fcf0-675b-498b-b433-08eb9f4ddf38"
+                  name="Reset Password"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e874cace-f6d1-4030-9be6-396e122b9966"
+                  name="Insert Email"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker
+            Id="4fc00a0d-3cf2-4a7a-ac0d-13abbe483501"
+            LastKnownName="Login"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f5e80856-d54c-4bce-8d98-0c51d31ef9fe"
+        name="Insert Email"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="3e778bd3-0863-4a88-992f-fd6499471af7"
+            isDerived="false"
+            sourceEndRoleName="Insert Email"
+            targetEndRoleName="Reset Password button"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="92fd5f1f-a1b4-4046-8452-a8245209a8e3"
+              LastKnownName="Reset Password button"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b621fa5a-b65e-4b40-8737-273a557dcb32"
+                  name="Insert Email"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d160b2af-1726-466d-986e-0381be6474dc"
+                  name="Reset Password button"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker
+            Id="4fc00a0d-3cf2-4a7a-ac0d-13abbe483501"
+            LastKnownName="Login"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="92fd5f1f-a1b4-4046-8452-a8245209a8e3"
+        name="Reset Password button"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="05a0bb12-9388-4d31-abee-5866699d4f4b">
+            <actorMoniker
+              Id="20038310-b11d-4f56-83cc-30e98430e74a"
+              LastKnownName="User"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="4fc00a0d-3cf2-4a7a-ac0d-13abbe483501"
+            LastKnownName="Login"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="18569add-5cb4-4d87-a7ae-2621204b8d77"
+        name="Registration"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f0afe597-af73-409d-8541-cb86f56e61ed"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="18569add-5cb4-4d87-a7ae-2621204b8d77"
+            LastKnownName="Registration"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9eee0141-00b1-4f0f-8095-f5b97e7eb5e7"
+        name="BoardMemberHandler"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="cdde3fdf-e5ee-4a6a-a353-ca637756944d"
+            name="Attribute1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="eb25ced4-4708-47ca-b32f-584f78b5375c"
+            name="Operation1"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1add9bd0-5ba8-4c94-89b4-cd18ca705a55"
+        name="MainView"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c62b8f97-77bc-4035-b4d2-bd3750f67321"
+        name="Relay Command"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1a715e1a-6409-4f1f-9bff-0870b50180ce"
+        name="ResidentHandler"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ddb7347f-f3fb-449e-9655-acea822d930f"
+        name="APIController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="ba4b5086-a47c-4441-8fed-368acd219a38"
+            name="FindAccount"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c92ee842-fdf9-419d-9fc0-257b51e78a70"
+                  name="User"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d57b3df2-b850-4613-b73d-334fffb61171"
+            name="RegisterAppartment"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4704fb03-5b41-4c54-bf6f-62b0e077f4d4"
+                  name="User"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5c8b94fe-d6eb-4785-afea-6f1c0b39da6b"
+                  name="Resident"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c4b8bb12-0eab-4509-a6ef-f741b0db79eb"
+            name="UpdateAccount"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c3deee23-c78c-4c4f-9c1d-f43400f3b082"
+                  name="User"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="08e75844-69f9-409f-98eb-6a14328dccf6"
+            name="UpdateApartment"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="05078b63-4302-4cfd-9b36-05648c7c6d1b"
+                  name="Apartment"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c26cf5e9-de8f-4f1d-b7e7-19ff4a94ea48"
+            name="CreateResident"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f5fddc0e-a256-498c-a8cf-e078a259ac39"
+                  name="User"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d934f044-ddad-43de-8290-777114b033f5"
+                  name="Resident"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="71ee432b-b48e-4b8c-bf98-539739ada8bf"
+            name="UpdateResident"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a65d0298-2833-43e2-8eef-601311470629"
+                  name="User"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ef3247f1-24b7-4baa-8a6c-81bfa13796e1"
+                  name="Resident"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="01945ba6-2410-42b0-8f2a-25cc56c81510"
+            name="GetResident"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1a31ea32-2913-4d94-84e4-b3a770ef6323"
+                  name="User"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="55502855-4082-41ac-9185-5148ab69171b"
+        name="CoreSingleton"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="5f6476a8-3fe6-4460-9d0f-c254dedb41f0">
+            <classMoniker
+              Id="ba7310c8-10bc-4b35-b89d-3da9ad4d8023"
+              LastKnownName="GenericUserModel"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="3bdf0a1b-7079-4061-8480-3ad9b680e625"
+            isDerived="false"
+            sourceEndRoleName="CoreSingleton"
+            targetEndRoleName="StateHandler"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="e068d366-d8cf-471a-a70c-3fbbd657fa46"
+              LastKnownName="StateHandler"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e1abd05d-f3fc-4529-90b6-faf27fdbe0dd"
+                  name="CoreSingleton"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9f4d9f1f-8f03-4d5d-ba2c-d38f4446949e"
+                  name="StateHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="bc902e03-d6cd-4363-9117-e308fac1ea9b"
+        name="BoardMemberModelSingleton"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a771f660-9ee9-4361-bb43-105276fcd41c"
+        name="GenericUserModelSingleton"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ba7310c8-10bc-4b35-b89d-3da9ad4d8023"
+        name="GenericUserModel"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="251ebf18-f13b-49c2-84c7-e7d0427801d4"
+            name="Id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="aea2705e-f765-4013-bc68-2c574b24c310"
+            name="Username"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="cf8fcb3c-6408-4c66-90da-50d868e5b2e1"
+            name="Password"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="007e0824-6962-407e-b48e-bee0f36e72ed"
+            name="IsAdmin"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="4f731300-50c5-4c2d-b767-b563ee089626"
+            name="R_No"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="d270e010-474b-43be-ad9d-9f3b431e390b"
+        name="BoadMemberModel"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c6d7e682-0846-41e0-b229-1b054367de65"
+        name="ResidentModel"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b42d4530-5166-4b06-9367-d82926910cad"
+        name="ApartmentHandler"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d5561043-7617-4a41-9858-a9b707efe893"
+        name="MessagingHandler"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="16456ac3-abea-498e-a052-4053058f57cf"
+        name="Class2"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e068d366-d8cf-471a-a70c-3fbbd657fa46"
+        name="StateHandler"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="92b7861b-6596-415b-8746-51c1b6eae40e">
+            <classMoniker
+              Id="ba7310c8-10bc-4b35-b89d-3da9ad4d8023"
+              LastKnownName="GenericUserModel"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+          </dependency>
+          <dependency
+            Id="cc95cfdb-3b30-4fa2-9dbd-0584bc42f390">
+            <classMoniker
+              Id="c6d7e682-0846-41e0-b229-1b054367de65"
+              LastKnownName="ResidentModel"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="d93c9056-b535-46ae-b0fe-8701c6f26bc5"
+            isDerived="false"
+            sourceEndRoleName="StateHandler"
+            targetEndRoleName="APIController"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="ddb7347f-f3fb-449e-9655-acea822d930f"
+              LastKnownName="APIController"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6e460aec-d188-41f7-ac48-5e2d17bf6b5b"
+                  name="StateHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8f407599-bd98-4c0d-bb45-fd58a9279c58"
+                  name="APIController"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="4d450370-3719-403b-9a08-c3c6a7c790c9"
+            name="CheckLogin"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c4355508-f9d1-4d15-945f-b204481d4e2e"
+                  name="string"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="139577d9-16c3-40af-a504-3d7244479091"
+                  name="string"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="fcaab058-c683-43ee-8e86-1f8b1c9507a7"
+            name="DoLogin"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="caba7cca-2d87-4e16-b834-74a28eeeb748"
+            name="DoLogout"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="84085052-c135-4c5e-a061-636db2e94d22"
+            name="DoRegister"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e4ae72e5-9f82-4a09-80dc-e29e3e255b63"
+                  name="User"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="718669c1-fc0b-40c5-bb93-3e87eccd08f7"
+            name="DoRegisterAux"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a21c451e-667b-4435-a95e-00d0c8b24a32"
+                  name="User"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="47b07978-0476-46e3-8c39-329cda165d25"
+                  name="User"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

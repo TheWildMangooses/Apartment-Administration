@@ -1,4 +1,4 @@
-namespace REST.Models
+namespace REST
 {
     using System;
     using System.Collections.Generic;
@@ -12,26 +12,28 @@ namespace REST.Models
         public Apartment()
         {
             Facilities = new HashSet<Facility>();
+            Residents = new HashSet<Resident>();
         }
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Ap_No { get; set; }
 
-        public int? IsFree { get; set; }
+        public int IsFree { get; set; }
 
-        public int? Floor { get; set; }
+        public int Floor { get; set; }
 
+        [Required]
         [StringLength(4)]
         public string Number { get; set; }
-
+        [ForeignKey("FK_Apartments_BuildingNo ")]///messed up shit here
         public int? B_No { get; set; }
 
-        public int? Size { get; set; }
+        public int Size { get; set; }
 
-        public int? No_Rooms { get; set; }
+        public int No_Rooms { get; set; }
 
-        public int? BBR { get; set; }
+        public int BBR { get; set; }
 
         public int? Fordelingstal { get; set; }
 
@@ -48,10 +50,12 @@ namespace REST.Models
 
         public DateTime? Uploaded_Doc_Date { get; set; }
 
-        [StringLength(50)]
-        public string Ap_Address { get; set; }
+        public virtual Building Building { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Facility> Facilities { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Resident> Residents { get; set; }
     }
 }
