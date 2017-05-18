@@ -100,6 +100,18 @@ namespace REST.Controllers
 
             return CreatedAtRoute("DefaultApi", new { id = user.Id }, user);
         }
+        // GET: api/Users/adri1685
+        [ResponseType(typeof(User))]
+        public async Task<IHttpActionResult> GetIdByUser(string username)
+        {
+            User user = await db.Users.FindAsync(username);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(user.Id);
+        }
 
         // DELETE: api/Users/5
         [ResponseType(typeof(User))]

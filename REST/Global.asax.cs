@@ -19,9 +19,7 @@ namespace REST
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             //            var xml = GlobalConfiguration.Configuration.Formatters.XmlFormatter; xml.UseXmlSerializer = true;
-            var json = GlobalConfiguration.Configuration.Formatters.JsonFormatter; json.UseDataContractJsonSerializer = true;
-            GlobalConfiguration.Configuration.Formatters.JsonFormatter.S‌​erializerSettings.Re‌​ferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
-            
+
 
         }
     }

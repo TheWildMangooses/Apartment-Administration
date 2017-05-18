@@ -23,6 +23,5 @@ namespace REST
 
         public int? R_No { get; set; }
 
-        public virtual Resident Resident { get; set; }
     }
 }
