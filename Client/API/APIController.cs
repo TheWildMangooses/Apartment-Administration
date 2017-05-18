@@ -8,7 +8,7 @@ namespace Client.API
 {
     class APIController
     {
-
+        private string APIURL = "";
         static async bool CheckLogin()
         {
 

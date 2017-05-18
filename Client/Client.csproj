@@ -104,6 +104,7 @@
     <Compile Include="Handlers\StateHandler.cs" />
     <Compile Include="Model\ApartmentModel.cs" />
     <Compile Include="Model\FacilitiesModel.cs" />
+    <Compile Include="Model\GenericSingleton.cs" />
     <Compile Include="Model\GenericUserModel.cs" />
     <Compile Include="Model\MessageModel.cs" />
     <Compile Include="Model\ResidentModel.cs" />
