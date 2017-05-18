@@ -4,15 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Client.API
+namespace Client.View_Models
 {
-    class APIController
+    class BoardViewModel
     {
-
-        static async bool CheckLogin()
-        {
-
-        }
-
     }
 }

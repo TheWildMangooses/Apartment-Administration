@@ -4,15 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Client.API
+namespace Client.Handlers
 {
-    class APIController
+    class MessagingHandler
     {
-
-        static async bool CheckLogin()
-        {
-
-        }
-
     }
 }

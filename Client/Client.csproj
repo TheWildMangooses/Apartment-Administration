@@ -97,7 +97,18 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Common\RelayCommand.cs" />
+    <Compile Include="Handlers\ApartmentHandler.cs" />
+    <Compile Include="Handlers\MessagingHandler.cs" />
+    <Compile Include="Handlers\ResidentHandler.cs" />
+    <Compile Include="Handlers\StateHandler.cs" />
+    <Compile Include="Model\ApartmentModel.cs" />
+    <Compile Include="Model\FacilitiesModel.cs" />
     <Compile Include="Model\GenericUserModel.cs" />
+    <Compile Include="Model\MessageModel.cs" />
+    <Compile Include="Model\ResidentModel.cs" />
+    <Compile Include="View-Models\BoardViewModel.cs" />
+    <Compile Include="View-Models\UserViewModel.cs" />
     <Compile Include="Views\AccountCreationBoardMember.xaml.cs">
       <DependentUpon>AccountCreationBoardMember.xaml</DependentUpon>
     </Compile>
@@ -208,11 +219,7 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Common\" />
-    <Folder Include="Handlers\" />
-    <Folder Include="View-Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
