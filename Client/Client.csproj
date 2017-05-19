@@ -103,20 +103,15 @@
     <Compile Include="Handlers\ResidentHandler.cs" />
     <Compile Include="Handlers\StateHandler.cs" />
     <Compile Include="Model\ApartmentModel.cs" />
-    <Compile Include="Model\ApartmentSingleton.cs" />
     <Compile Include="Model\FacilitiesModel.cs" />
     <Compile Include="Model\GenericSingleton.cs" />
     <Compile Include="Model\GenericUserModel.cs" />
     <Compile Include="Model\MessageModel.cs" />
     <Compile Include="Model\ResidentModel.cs" />
-    <Compile Include="View-Models\ApartmentViewModel.cs" />
     <Compile Include="View-Models\BoardViewModel.cs" />
     <Compile Include="View-Models\UserViewModel.cs" />
     <Compile Include="Views\AccountCreationBoardMember.xaml.cs">
       <DependentUpon>AccountCreationBoardMember.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ApartmentManagement.xaml.cs">
-      <DependentUpon>ApartmentManagement.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ApartmentView.xaml.cs">
       <DependentUpon>ApartmentView.xaml</DependentUpon>
@@ -171,10 +166,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Views\AccountCreationBoardMember.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\ApartmentManagement.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -19,15 +19,15 @@ namespace REST
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Ap_No { get; set; }
 
-        public string IsFree { get; set; }
+        public int IsFree { get; set; }
 
         public int Floor { get; set; }
 
         [Required]
         [StringLength(4)]
         public string Number { get; set; }
-     
-        public string Address { get; set; }
+     //   [ForeignKey("FK_Apartments_BuildingNo")]///messed up shit here
+        public int? B_No { get; set; }
 
         public int Size { get; set; }
 
