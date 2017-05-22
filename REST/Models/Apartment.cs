@@ -1,4 +1,4 @@
-namespace REST
+namespace REST.Models
 {
     using System;
     using System.Collections.Generic;
@@ -26,7 +26,7 @@ namespace REST
         [Required]
         [StringLength(4)]
         public string Number { get; set; }
-     //   [ForeignKey("FK_Apartments_BuildingNo")]///messed up shit here
+
         public int? B_No { get; set; }
 
         public int Size { get; set; }

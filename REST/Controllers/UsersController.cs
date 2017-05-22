@@ -9,13 +9,14 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
-using REST;
+using REST.Models;
 
 namespace REST.Controllers
 {
+    [RoutePrefix("api/Users")]
     public class UsersController : ApiController
     {
-        private DatabaseContext db = new DatabaseContext();
+        private DBContext db = new DBContext();
 
         // GET: api/Users
         public IQueryable<User> GetUsers()
@@ -101,16 +102,17 @@ namespace REST.Controllers
             return CreatedAtRoute("DefaultApi", new { id = user.Id }, user);
         }
         // GET: api/Users/adri1685
+        [Route("{username}")]
         [ResponseType(typeof(User))]
         public async Task<IHttpActionResult> GetIdByUser(string username)
         {
-            User user = await db.Users.FindAsync(username);
+            User user = await (from usr in db.Users where usr.Username == username select usr).FirstOrDefaultAsync();
             if (user == null)
             {
                 return NotFound();
             }
 
-            return Ok(user.Id);
+            return Ok(user);
         }
 
         // DELETE: api/Users/5

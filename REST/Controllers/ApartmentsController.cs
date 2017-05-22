@@ -10,12 +10,13 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using REST;
+using REST.Models;
 
 namespace REST.Controllers
 {
     public class ApartmentsController : ApiController
     {
-        private DatabaseContext db = new DatabaseContext();
+        private DBContext db = new DBContext();
 
         // GET: api/Apartments
         public IQueryable<Apartment> GetApartments()

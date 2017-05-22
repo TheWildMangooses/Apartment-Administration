@@ -1,4 +1,4 @@
-namespace REST
+namespace REST.Models
 {
     using System;
     using System.Collections.Generic;
@@ -23,5 +23,6 @@ namespace REST
 
         public int? R_No { get; set; }
 
+        public virtual Resident Resident { get; set; }
     }
 }

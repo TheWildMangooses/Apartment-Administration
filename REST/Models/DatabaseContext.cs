@@ -1,15 +1,16 @@
-namespace REST
+namespace REST.Models
 {
     using System;
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class DatabaseContext : DbContext
+    public partial class DBContext : DbContext
     {
-        public DatabaseContext()
-            : base("name=DatabaseContext")
+        public DBContext()
+            : base("name=DBContext")
         {
+            base.Configuration.ProxyCreationEnabled = false;
         }
 
         public virtual DbSet<Apartment> Apartments { get; set; }
@@ -42,6 +43,10 @@ namespace REST
                 .HasMany(e => e.Residents)
                 .WithRequired(e => e.Apartment)
                 .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Building>()
+                .Property(e => e.Address)
+                .IsUnicode(false);
 
             modelBuilder.Entity<Facility>()
                 .Property(e => e.F_Name)

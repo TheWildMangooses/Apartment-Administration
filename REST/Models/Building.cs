@@ -1,4 +1,4 @@
-namespace REST
+namespace REST.Models
 {
     using System;
     using System.Collections.Generic;
@@ -19,8 +19,8 @@ namespace REST
         public int B_No { get; set; }
 
         [Required]
-        [MaxLength(50)]
-        public byte[] Address { get; set; }
+        [StringLength(50)]
+        public string Address { get; set; }
 
         public int? No_Ap { get; set; }
 
