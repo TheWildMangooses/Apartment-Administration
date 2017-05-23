@@ -16,7 +16,7 @@ namespace REST.Controllers
     [RoutePrefix("api/Users")]
     public class UsersController : ApiController
     {
-        private DBContext db = new DBContext();
+        private DataContext db = new DataContext();
 
         // GET: api/Users
         public IQueryable<User> GetUsers()

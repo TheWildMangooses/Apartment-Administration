@@ -15,7 +15,7 @@ namespace REST.Controllers
 {
     public class ResidentsController : ApiController
     {
-        private DBContext db = new DBContext();
+        private DataContext db = new DataContext();
 
         // GET: api/Residents
         public IQueryable<Resident> GetResidents()

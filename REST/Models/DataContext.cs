@@ -5,10 +5,10 @@ namespace REST.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class DBContext : DbContext
+    public partial class DataContext : DbContext
     {
-        public DBContext()
-            : base("name=DBContext")
+        public DataContext()
+            : base("name=DataContext")
         {
             base.Configuration.ProxyCreationEnabled = false;
         }
@@ -94,6 +94,10 @@ namespace REST.Models
 
             modelBuilder.Entity<User>()
                 .Property(e => e.Username)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<User>()
+                .Property(e => e.Password)
                 .IsUnicode(false);
         }
     }

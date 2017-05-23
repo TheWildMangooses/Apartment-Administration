@@ -15,7 +15,7 @@ namespace REST.Controllers
 {
     public class MessagesController : ApiController
     {
-        private DBContext db = new DBContext();
+        private DataContext db = new DataContext();
 
         // GET: api/Messages
         public IQueryable<Message> GetMessages()

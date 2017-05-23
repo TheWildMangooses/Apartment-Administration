@@ -16,7 +16,7 @@ namespace REST.Controllers
 {
     public class BuildingsController : ApiController
     {
-        private DBContext db = new DBContext();
+        private DataContext db = new DataContext();
 
         // GET: api/Buildings
         public IQueryable<Building> GetBuildings()

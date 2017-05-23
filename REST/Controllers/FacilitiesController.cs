@@ -15,7 +15,7 @@ namespace REST.Controllers
 {
     public class FacilitiesController : ApiController
     {
-        private DBContext db = new DBContext();
+        private DataContext db = new DataContext();
 
         // GET: api/Facilities
         public IQueryable<Facility> GetFacilities()
