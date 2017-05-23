@@ -14,8 +14,8 @@ namespace REST.Models
         [StringLength(15)]
         public string Username { get; set; }
 
-        [MaxLength(50)]
-        public byte[] Password { get; set; }
+        [StringLength(50)]
+        public string Password { get; set; }
 
         public bool? IsAdmin { get; set; }
 

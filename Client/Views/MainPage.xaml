@@ -7,8 +7,6 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,-360,0">
-        <Image HorizontalAlignment="Left" Height="132" Margin="288,280,0,0" Source="\Assets\logo.png" VerticalAlignment="Top" Width="150"/>
-
-    </Grid>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,-360,0"/>
+    
 </Page>

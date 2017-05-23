@@ -10,7 +10,8 @@ namespace Client.Model
     {
         private GenericSingleton()
         {
-            //I suppose everything should be 
+            //I suppose everything should be here
+
         }
         private static GenericSingleton _instance;
         private static GenericSingleton Instance

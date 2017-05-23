@@ -97,6 +97,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Common\Annotations.cs" />
     <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="Handlers\ApartmentHandler.cs" />
     <Compile Include="Handlers\MessagingHandler.cs" />
@@ -109,6 +110,7 @@
     <Compile Include="Model\MessageModel.cs" />
     <Compile Include="Model\ResidentModel.cs" />
     <Compile Include="View-Models\BoardViewModel.cs" />
+    <Compile Include="View-Models\StateViewModel.cs" />
     <Compile Include="View-Models\UserViewModel.cs" />
     <Compile Include="Views\AccountCreationBoardMember.xaml.cs">
       <DependentUpon>AccountCreationBoardMember.xaml</DependentUpon>

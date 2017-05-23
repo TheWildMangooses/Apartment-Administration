@@ -13,7 +13,7 @@ namespace Client.API
     class APIController
     {
         private const string APIURL = "";
-        static async Task<int> FindAccount(UserModel user)
+        static async Task<UserModel> DoLogin(string username,string password)
         {
             
             HttpClientHandler httphandler = new HttpClientHandler();
@@ -25,7 +25,8 @@ namespace Client.API
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 try
                 {
-                    var response = await client.GetAsync("/api/")
+                    var response = await client.GetAsync("/api/" + username + "/" + password + "");
+
                 }
             }
         }

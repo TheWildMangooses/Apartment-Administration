@@ -101,18 +101,45 @@ namespace REST.Controllers
 
             return CreatedAtRoute("DefaultApi", new { id = user.Id }, user);
         }
-        // GET: api/Users/adri1685
-        [Route("{username}")]
+        // GET: api/Users/adri1685/test
+        [Route("{username}/{password}")]
         [ResponseType(typeof(User))]
-        public async Task<IHttpActionResult> GetIdByUser(string username)
+        public async Task<IHttpActionResult> GetUser(string username,string password)
         {
-            User user = await (from usr in db.Users where usr.Username == username select usr).FirstOrDefaultAsync();
+            User user = await (from usr in db.Users where (usr.Username == username) select usr).FirstOrDefaultAsync();
             if (user == null)
             {
                 return NotFound();
             }
+            else if(user.Password!=password)
+            {
+                return BadRequest("wrong-password");
+            }
 
             return Ok(user);
+        }
+
+        [AcceptVerbs("GET", "POST")]
+        [HttpGet]
+        [Route("{username}/{oldpassword}/{newpassword}")]
+        [ResponseType(typeof(User))]
+        public async Task<IHttpActionResult> ChangePassword(string username,string oldpassword,string newpassword)
+        {
+            User user = await (from usr in db.Users where usr.Username == username select usr).FirstOrDefaultAsync();
+            if (user == null)
+                return NotFound();
+            else if (user.Password != oldpassword)
+                return BadRequest("wrong-password");
+                user.Password = newpassword;
+            try
+            {
+                await db.SaveChangesAsync();
+                return Ok(user);
+            }
+            catch (DbUpdateException)
+            {
+                return BadRequest("error");
+            }
         }
 
         // DELETE: api/Users/5
