@@ -7,12 +7,12 @@ using Windows.Graphics.Imaging;
 
 namespace Client.Model
 {
-    class UserModel
+    public class UserModel
     {
         private int _id;
         private string _username;
         private string _password;
-        private int _isadmin;
+        private Boolean _isadmin;
         private int _adminLevel;
         private int _r_No;
 
@@ -34,7 +34,7 @@ namespace Client.Model
             get { return _password; }
             set { _password = value; }
         }
-        public int IsAdmin
+        public Boolean IsAdmin
         {
             get { return _isadmin; }
             set { _isadmin = value; }

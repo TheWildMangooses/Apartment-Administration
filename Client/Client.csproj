@@ -98,17 +98,21 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Common\Annotations.cs" />
+    <Compile Include="Common\NavigationService.cs" />
     <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="Handlers\ApartmentHandler.cs" />
+    <Compile Include="Handlers\EventAggregator.cs" />
     <Compile Include="Handlers\MessagingHandler.cs" />
     <Compile Include="Handlers\ResidentHandler.cs" />
     <Compile Include="Handlers\StateHandler.cs" />
+    <Compile Include="Handlers\UserHandler.cs" />
     <Compile Include="Model\ApartmentModel.cs" />
     <Compile Include="Model\FacilitiesModel.cs" />
     <Compile Include="Model\GenericSingleton.cs" />
     <Compile Include="Model\GenericUserModel.cs" />
     <Compile Include="Model\MessageModel.cs" />
     <Compile Include="Model\ResidentModel.cs" />
+    <Compile Include="Model\UserSingleton.cs" />
     <Compile Include="View-Models\BoardViewModel.cs" />
     <Compile Include="View-Models\StateViewModel.cs" />
     <Compile Include="View-Models\UserViewModel.cs" />
@@ -118,14 +122,14 @@
     <Compile Include="Views\ApartmentView.xaml.cs">
       <DependentUpon>ApartmentView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\BoardMemberView.xaml.cs">
-      <DependentUpon>BoardMemberView.xaml</DependentUpon>
+    <Compile Include="Views\BoardMView.xaml.cs">
+      <DependentUpon>BoardMView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Facilities.xaml.cs">
+      <DependentUpon>Facilities.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\MessagingView.xaml.cs">
@@ -175,17 +179,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\BoardMemberView.xaml">
+    <Page Include="Views\BoardMView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Facilities.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\MainPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\MessagingView.xaml">
       <SubType>Designer</SubType>
@@ -225,6 +229,12 @@
   <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Client_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -2,19 +2,27 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Client.View_Models;
 using System.Threading.Tasks;
 
 namespace Client.Model
 {
-    class GenericSingleton
+    public class GenericSingleton
     {
+        private static UserModel _user { get; set; }
+
+        public UserModel User
+        {
+            get { return _user; }
+            set { _user = value; }
+        }
         private GenericSingleton()
         {
-            //I suppose everything should be here
+           
 
         }
         private static GenericSingleton _instance;
-        private static GenericSingleton Instance
+        public static GenericSingleton Instance
         {
             get
             {

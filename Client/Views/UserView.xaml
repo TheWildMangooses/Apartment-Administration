@@ -1,13 +1,77 @@
 ﻿<Page
-    x:Class="Client.Views.UserView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Client.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    xmlns:View_Models="using:Client.View_Models"
+    x:Class="Client.Views.UserView"
+    mc:Ignorable="d" Height="768" Width="1024">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MaxWidth="1024" MaxHeight="768">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.DataContext>
+            <View_Models:UserViewModel/>
+        </Grid.DataContext>
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+            <SplitView x:Name="SplitView" 
+                DisplayMode="CompactOverlay" 
+                OpenPaneLength="249" 
+                CompactPaneLength="100" 
+                HorizontalAlignment="Left" Width="75" Height="760">
+                <SplitView.Pane>
+                    <ListBox SelectionMode="Single" 
+                        x:Name="IconsListBox" 
+                        SelectionChanged="IconsListBox_SelectionChanged" Margin="0,0,179,0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="760" Width="70">
+                        <ListBoxItem x:Name="LogOut" Width="61" Height="63" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <StackPanel Orientation="Horizontal" Width="35" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE72D;" Height="38" Width="35" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem x:Name="Apartment" Width="68" HorizontalContentAlignment="Center" HorizontalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE10F;" Height="35" Width="34" />
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem x:Name="GeneralOverview" Width="61">
+                            <StackPanel Orientation="Horizontal" Width="34">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE1C3;" Height="35" Width="34" />
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem x:Name="CoResidents" Width="61">
+                            <StackPanel Orientation="Horizontal" Width="38">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE125;" Height="35" Width="34" />
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem x:Name="PersonalDetails" Width="61">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE136;" Height="35" Width="34" />
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem x:Name="Facilities" Width="61">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE71d;" Height="35" Width="34" />
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem x:Name="Messages" Width="61">
+                            <StackPanel Orientation="Horizontal" Width="39">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE119;" Height="35" Width="38" />
+                            </StackPanel>
+                        </ListBoxItem>
+                    </ListBox>
+                </SplitView.Pane>
+            </SplitView>
+
+
+        </StackPanel>
+        <Grid Height="758" Margin="75,10,0,0" VerticalAlignment="Top">
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="25,728,0,0" TextWrapping="Wrap" Text="{Binding CurrentUser.Username, Mode=OneWay}" VerticalAlignment="Top"/>
+        </Grid>
+
 
     </Grid>
 </Page>

@@ -6,17 +6,55 @@ using System.Threading.Tasks;
 using Client.Model;
 using Client.Annotations;
 using System.ComponentModel;
+using Client.Handlers;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
+using Client.Common;
 
 namespace Client.View_Models
 {
-    public class StateViewModel: INotifyPropertyChanged
+    public class StateViewModel : INotifyPropertyChanged
     {
 
 
-        GenericSingleton statesingleton;
+       public GenericSingleton StateSingleton { get; set; }
 
+        private ICommand _login { get; set; }
 
+        private string _password;
+        private string _username;
+        public string Password
+        {
+            get { return _password; }
+            set { _password = value; OnPropertyChanged("Password"); }
+        }
+        public string Username
+        {
+            get { return _username; }
+            set { _username = value; OnPropertyChanged("Username"); }
+        }
+
+        public ICommand  Login {
+            get { return _login; }
+            set { _login = value; }
+        }
+        public StateHandler StateHandler { get; set; }
+
+//        private UserModel _currentloggeduser;
+ //       public UserModel CurrentLoggedUser
+ //       {
+ //           get { return _currentloggeduser; }
+ //           set { _currentloggeduser = value; OnPropertyChanged("CurrentLoggedUser"); }
+ //       }
+        public StateViewModel()
+        {
+            StateSingleton = GenericSingleton.Instance;
+ //           UserSingleton = UserSingleton.Instance;
+ //           UserSingleton.User = CurrentLoggedUser;
+ //           UserModel User = CurrentLoggedUser;
+            StateHandler = new StateHandler(this);
+            Login = new RelayCommand(StateHandler.PrepareLoginPhase);
+        }
         
         public event PropertyChangedEventHandler PropertyChanged;
 

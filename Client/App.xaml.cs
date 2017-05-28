@@ -14,7 +14,9 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Client.Views;
 using Windows.UI.Xaml.Navigation;
+using Client.Common;
 
 namespace Client
 {
@@ -27,13 +29,14 @@ namespace Client
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
         /// </summary>
+        /// 
         public App()
         {
             Microsoft.HockeyApp.HockeyClient.Current.Configure("1f6b2f86c7734a8a91f8b136a26573e8");
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }
-
+        public static NavigationService NavService { get; protected set; }
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
         /// will be used such as when the application is launched to open a specific file.
@@ -65,11 +68,12 @@ namespace Client
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
                     // parameter
-                    rootFrame.Navigate(typeof (MainPage), e.Arguments);
+                    rootFrame.Navigate(typeof(Login), e.Arguments);
                 }
 
                 // Ensure the current window is active
                 Window.Current.Activate();
+                NavService = new NavigationService(ref rootFrame);
             }
         }
 
