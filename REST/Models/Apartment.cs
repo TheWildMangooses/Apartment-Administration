@@ -19,7 +19,7 @@ namespace REST.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Ap_No { get; set; }
 
-        public int IsFree { get; set; }
+        public bool IsFree { get; set; }
 
         public int Floor { get; set; }
 
