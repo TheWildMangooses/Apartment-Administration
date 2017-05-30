@@ -26,5 +26,9 @@ namespace Client.Views
         {
             this.InitializeComponent();
         }
+        private void IconsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

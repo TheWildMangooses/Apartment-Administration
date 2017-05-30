@@ -28,12 +28,6 @@ namespace Client.Handlers
                 //TODO: SHOULD SHIT SHOULD COME HERE
                 if (!check.IsAdmin)
                 {
-                    if (check.R_No == 0)
-                    {
-                        //TODO: ASSIGN APARTMENT 
-                        check.R_No = 0;
-
-                    }
                     //                   StateViewModel.CurrentLoggedUser = check;
                     StateViewModel.StateSingleton.User = check;
                     DecideNextView(false);

@@ -13,8 +13,10 @@ using REST.Models;
 
 namespace REST.Controllers
 {
+    [RoutePrefix("api/Residents")]
     public class ResidentsController : ApiController
     {
+
         private DataContext db = new DataContext();
 
         // GET: api/Residents
@@ -34,6 +36,16 @@ namespace REST.Controllers
             }
 
             return Ok(resident);
+        }
+
+        [Route("Cohabitors/{Parent_Resident}")]
+        [ResponseType(typeof(IEnumerable<Resident>))]
+        public IEnumerable<Resident> GetResidentsByParent(int Parent_Resident)
+        {
+            var residents = db.Residents.Where(t => t.Parent_Resident == Parent_Resident).ToList();
+            if (residents == null)
+                throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
+            return residents;
         }
 
         // PUT: api/Residents/5

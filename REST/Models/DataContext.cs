@@ -39,10 +39,10 @@ namespace REST.Models
                 .WithRequired(e => e.Apartment)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Apartment>()
+/*            modelBuilder.Entity<Apartment>()
                 .HasMany(e => e.Residents)
                 .WithRequired(e => e.Apartment)
-                .WillCascadeOnDelete(false);
+                .WillCascadeOnDelete(false);*/
 
             modelBuilder.Entity<Building>()
                 .Property(e => e.Address)
@@ -80,7 +80,7 @@ namespace REST.Models
                 .Property(e => e.E_Mail)
                 .IsFixedLength();
 
-            modelBuilder.Entity<Resident>()
+/*            modelBuilder.Entity<Resident>()
                 .HasMany(e => e.Messages)
                 .WithRequired(e => e.Resident)
                 .HasForeignKey(e => e.Sent_To)
@@ -90,7 +90,7 @@ namespace REST.Models
                 .HasMany(e => e.Messages1)
                 .WithRequired(e => e.Resident1)
                 .HasForeignKey(e => e.R_No)
-                .WillCascadeOnDelete(false);
+                .WillCascadeOnDelete(false); */
 
             modelBuilder.Entity<User>()
                 .Property(e => e.Username)

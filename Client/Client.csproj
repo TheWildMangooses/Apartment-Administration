@@ -101,7 +101,6 @@
     <Compile Include="Common\NavigationService.cs" />
     <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="Handlers\ApartmentHandler.cs" />
-    <Compile Include="Handlers\EventAggregator.cs" />
     <Compile Include="Handlers\MessagingHandler.cs" />
     <Compile Include="Handlers\ResidentHandler.cs" />
     <Compile Include="Handlers\StateHandler.cs" />

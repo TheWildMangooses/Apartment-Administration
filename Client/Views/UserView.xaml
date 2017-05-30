@@ -47,7 +47,7 @@
                                 <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE125;" Height="35" Width="34" />
                             </StackPanel>
                         </ListBoxItem>
-                        <ListBoxItem x:Name="PersonalDetails" Width="61">
+                        <ListBoxItem x:Name="PersonalDetails" Width="61" >
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE136;" Height="35" Width="34" />
                             </StackPanel>
@@ -69,8 +69,15 @@
 
         </StackPanel>
         <Grid Height="758" Margin="75,10,0,0" VerticalAlignment="Top">
-            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="25,728,0,0" TextWrapping="Wrap" Text="{Binding CurrentUser.Username, Mode=OneWay}" VerticalAlignment="Top"/>
+            <StackPanel HorizontalAlignment="Center" Height="576" Margin="245,65,195,117" VerticalAlignment="Center" Width="509" Padding="0">
+                <Image x:Name="image" Height="226" Margin="129,30,105,0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="275"/>
+                <TextBox x:Name="phone_no" TextWrapping="Wrap" Text=""  Margin="129,30,105,30"/>
+                <TextBox x:Name="email" TextWrapping="Wrap" Text="" Margin="129,0,105,0"/>
+                <DatePicker HorizontalAlignment="Stretch" Header="Move out date request." VerticalAlignment="Stretch" Margin="79,30,55,0"/>
+            </StackPanel>
         </Grid>
+        <Button x:Name="button" Content="Save" HorizontalAlignment="Left" Margin="390,698,0,0" VerticalAlignment="Top" Height="60" Width="180"/>
+        <Button x:Name="changeimg" Content="Change picture" HorizontalAlignment="Left" Margin="610,698,0,0" VerticalAlignment="Top" Height="60" Width="180"/>
 
 
     </Grid>
