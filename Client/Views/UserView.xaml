@@ -6,7 +6,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:View_Models="using:Client.View_Models"
     x:Class="Client.Views.UserView"
-    mc:Ignorable="d" Height="768" Width="1024">
+    mc:Ignorable="d" Height="760" Width="1024">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MaxWidth="1024" MaxHeight="768">
         <Grid.RowDefinitions>
@@ -26,7 +26,7 @@
                 <SplitView.Pane>
                     <ListBox SelectionMode="Single" 
                         x:Name="IconsListBox" 
-                        SelectionChanged="IconsListBox_SelectionChanged" Margin="0,0,179,0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="760" Width="70">
+                        SelectionChanged="IconsListBox_SelectionChanged" Margin="0,0,174,0" HorizontalAlignment="Left" VerticalAlignment="Center" Height="760" Width="75" HorizontalContentAlignment="Left">
                         <ListBoxItem x:Name="LogOut" Width="61" Height="63" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <StackPanel Orientation="Horizontal" Width="35" HorizontalAlignment="Center" VerticalAlignment="Center">
                                 <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE72D;" Height="38" Width="35" HorizontalAlignment="Center" VerticalAlignment="Center" />
@@ -68,16 +68,16 @@
 
 
         </StackPanel>
-        <Grid Height="758" Margin="75,10,0,0" VerticalAlignment="Top">
-            <StackPanel HorizontalAlignment="Center" Height="576" Margin="245,65,195,117" VerticalAlignment="Center" Width="509" Padding="0">
+        <Grid Height="758" Margin="75,10,0,0" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center" Height="595" Margin="245,65,195,98" VerticalAlignment="Center" Width="509" Padding="0">
                 <Image x:Name="image" Height="226" Margin="129,30,105,0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="275"/>
-                <TextBox x:Name="phone_no" TextWrapping="Wrap" Text=""  Margin="129,30,105,30"/>
-                <TextBox x:Name="email" TextWrapping="Wrap" Text="" Margin="129,0,105,0"/>
+                <TextBox x:Name="phone_no" TextWrapping="Wrap" Text="{Binding CurrentResident.Phone_No,Mode=TwoWay}"  Margin="129,30,105,30"/>
+                <TextBox x:Name="email" TextWrapping="Wrap" Text="{Binding CurrentResident.E_Mail,Mode=TwoWay}" Margin="129,0,105,0"/>
                 <DatePicker HorizontalAlignment="Stretch" Header="Move out date request." VerticalAlignment="Stretch" Margin="79,30,55,0"/>
             </StackPanel>
         </Grid>
-        <Button x:Name="button" Content="Save" HorizontalAlignment="Left" Margin="390,698,0,0" VerticalAlignment="Top" Height="60" Width="180"/>
-        <Button x:Name="changeimg" Content="Change picture" HorizontalAlignment="Left" Margin="610,698,0,0" VerticalAlignment="Top" Height="60" Width="180"/>
+        <Button x:Name="button" Content="Save" HorizontalAlignment="Left" Margin="320,690,0,0" VerticalAlignment="Top" Height="60" Width="180"/>
+        <Button x:Name="changeimg" Content="Change picture" HorizontalAlignment="Left" Margin="620,690,0,0" VerticalAlignment="Top" Height="60" Width="180"/>
 
 
     </Grid>

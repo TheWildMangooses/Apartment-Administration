@@ -24,6 +24,8 @@ namespace REST.Models
 
         public int? No_Ap { get; set; }
 
+        public bool? IsActive { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Apartment> Apartments { get; set; }
     }

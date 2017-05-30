@@ -23,10 +23,6 @@ namespace REST.Models
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Apartment>()
-                .Property(e => e.Number)
-                .IsFixedLength();
-
-            modelBuilder.Entity<Apartment>()
                 .Property(e => e.Rent)
                 .HasPrecision(19, 4);
 
@@ -35,14 +31,18 @@ namespace REST.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<Apartment>()
+                .Property(e => e.Address)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Apartment>()
                 .HasMany(e => e.Facilities)
                 .WithRequired(e => e.Apartment)
                 .WillCascadeOnDelete(false);
 
-/*            modelBuilder.Entity<Apartment>()
+            modelBuilder.Entity<Apartment>()
                 .HasMany(e => e.Residents)
                 .WithRequired(e => e.Apartment)
-                .WillCascadeOnDelete(false);*/
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Building>()
                 .Property(e => e.Address)
@@ -70,17 +70,17 @@ namespace REST.Models
 
             modelBuilder.Entity<Resident>()
                 .Property(e => e.Name)
-                .IsFixedLength();
+                .IsUnicode(false);
 
             modelBuilder.Entity<Resident>()
                 .Property(e => e.L_Name)
-                .IsFixedLength();
+                .IsUnicode(false);
 
             modelBuilder.Entity<Resident>()
                 .Property(e => e.E_Mail)
-                .IsFixedLength();
+                .IsUnicode(false);
 
-/*            modelBuilder.Entity<Resident>()
+            modelBuilder.Entity<Resident>()
                 .HasMany(e => e.Messages)
                 .WithRequired(e => e.Resident)
                 .HasForeignKey(e => e.Sent_To)
@@ -90,7 +90,7 @@ namespace REST.Models
                 .HasMany(e => e.Messages1)
                 .WithRequired(e => e.Resident1)
                 .HasForeignKey(e => e.R_No)
-                .WillCascadeOnDelete(false); */
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<User>()
                 .Property(e => e.Username)

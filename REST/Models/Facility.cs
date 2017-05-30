@@ -40,6 +40,8 @@ namespace REST.Models
 
         public int? F_Value { get; set; }
 
+        public bool? IsActive { get; set; }
+
         public virtual Apartment Apartment { get; set; }
     }
 }

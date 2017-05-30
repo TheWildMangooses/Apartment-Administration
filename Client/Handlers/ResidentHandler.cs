@@ -35,6 +35,11 @@ namespace Client.Handlers
 
 
         }
+        public void SaveUserInfo()
+        {
+
+        }
+
 
     }
 }

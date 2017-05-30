@@ -19,6 +19,7 @@ namespace Client.Model
         private bool _isowner;
         private byte[] _image;
         private int _parent_Resident;
+        private bool _isactive;
 
         public ResidentModel() { }
 
@@ -34,6 +35,7 @@ namespace Client.Model
         public int Phone_No { get { return _phone_no; } set { _phone_no = value; } }
         public byte[] Picture { get { return _image; } set { _image = value; } }
         public int R_No { get { return _r_no; } set { _r_no = value; } }  
+        public bool IsActive { get { return _isactive; } set { _isactive = value; } }
         #endregion
 
 

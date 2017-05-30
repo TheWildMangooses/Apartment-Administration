@@ -19,13 +19,11 @@ namespace REST.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Ap_No { get; set; }
 
-        public int IsFree { get; set; }
+        public bool IsFree { get; set; }
 
         public int Floor { get; set; }
 
-        [Required]
-        [StringLength(4)]
-        public string Number { get; set; }
+        public int Number { get; set; }
 
         public int? B_No { get; set; }
 
@@ -49,6 +47,11 @@ namespace REST.Models
         public string Uploaded_Doc_Name { get; set; }
 
         public DateTime? Uploaded_Doc_Date { get; set; }
+
+        [StringLength(50)]
+        public string Address { get; set; }
+
+        public bool? IsActive { get; set; }
 
         public virtual Building Building { get; set; }
 
