@@ -1,22 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="8fd8375f-493b-4de1-a67d-d3e00dc70ea7" name="Resident Registration" linkedPackageId="52544aff-df3d-4d9b-a16d-ed46f704ea74" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
-  <profileInstances>
-    <packageHasProfileInstances Id="2f245c17-b0dd-4934-8a2d-c4d0dfd7cbab">
-      <profileInstance Id="bbcf0790-1173-487a-a609-5b0a2546ba71" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="75b6232f-f682-4eca-9c39-8dbf2f981b17">
-      <profileInstance Id="743cc349-f067-4217-a3ae-8c1decb36e19" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <useCaseModelRootHasTypes>
-      <subsystem Id="9cfd3c5a-2743-4012-b64d-3c9428650d55" name="Registration" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <subsystem Id="9cfd3c5a-2743-4012-b64d-3c9428650d55" name="Coresident Registration" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="18569add-5cb4-4d87-a7ae-2621204b8d77" />
       </subsystem>
     </useCaseModelRootHasTypes>
@@ -24,48 +10,504 @@
       <actor Id="fe3ae361-7980-464b-a4f9-3e46c1b957d8" name="User" isAbstract="false" isLeaf="false">
         <elementDefinition Id="20038310-b11d-4f56-83cc-30e98430e74a" />
         <targetEnds>
-          <association Id="53b7be7f-b533-4276-8d0a-4307eef2569a" isDerived="false" sourceEndRoleName="User" targetEndRoleName="User fills the boxes" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="43fd348d-5742-4017-9f13-227410baf40a" LastKnownName="User fills the boxes" />
+          <association Id="4079b966-6222-4d24-af15-92fed3ae01aa" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Resident Registration1" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="97d0f834-cedd-45bb-b29c-5a4610a420cf" LastKnownName="Login" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
-                <memberEnd Id="4e05d38d-195d-4ae1-b051-ea0ffae8627a" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="a35c9088-777e-43bc-bf0c-e901aff49aad" />
+                <memberEnd Id="14cb9db4-2ac1-491b-83ed-9b0b50739a78" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="779bf5b0-92d0-490a-9432-468071671de3" />
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="5f32c6e3-669a-4f9b-b771-e0640bdfbe47" name="User fills the boxes" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="2d056167-546f-4e8c-b72b-7fe39b19d900" />
+                <memberEnd Id="b63f7cef-aadd-4490-9368-6537829b49f0" name="Resident Registration1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="63458041-3014-4184-b78e-2111715d46b3" />
                 </memberEnd>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
-            <elementDefinition Id="a499fc4c-5cd0-4716-9f1a-6a7cd2a0f5f6" />
+            <elementDefinition Id="5798c1bd-b046-40f2-b973-93e46c235c98" />
           </association>
         </targetEnds>
       </actor>
     </useCaseModelRootHasTypes>
     <packageHasNamedElement>
-      <useCase Id="068963dc-1531-48c7-b2b3-0ca8b2173445" name="Resident Registration" isAbstract="false" isLeaf="false">
+      <useCase Id="068963dc-1531-48c7-b2b3-0ca8b2173445" name="Coresident Registration" isAbstract="false" isLeaf="false">
         <elementDefinition Id="281195bd-7c4b-4e15-a6a5-9732532bf18d" />
       </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <useCase Id="43fd348d-5742-4017-9f13-227410baf40a" name="User fills the boxes" isAbstract="false" isLeaf="false">
+      <useCase Id="43fd348d-5742-4017-9f13-227410baf40a" name="Navigates to coresident view" isAbstract="false" isLeaf="false">
         <elementDefinition Id="cf7aeff8-bc9c-4536-bdd9-03960d9a7261" />
+        <targetEnds>
+          <association Id="5db770ce-03e0-4f4a-8920-5855a7cad0b2" isDerived="false" sourceEndRoleName="Navigates to Cohabitor view" targetEndRoleName="Add cohabitor button" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="6e48721f-ba4d-418e-8462-8e1839066869" LastKnownName="Add coresident  button" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="49d715c4-6988-49b6-b133-c16a1c4edcd2" name="Navigates to Cohabitor view" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7d09c318-7174-43e0-bd69-bdffc0c64f89" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ce11db09-f355-4525-a921-a3d0d386e95c" name="Add cohabitor button" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f37986aa-8a4b-4198-9926-e8276fab59f6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="67973e6e-3f6d-499a-81bc-d887d51cad39" />
+          </association>
+        </targetEnds>
         <subjects>
-          <subsystemMoniker Id="9cfd3c5a-2743-4012-b64d-3c9428650d55" LastKnownName="Registration" />
+          <subsystemMoniker Id="9cfd3c5a-2743-4012-b64d-3c9428650d55" LastKnownName="Coresident Registration" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <useCase Id="97d0f834-cedd-45bb-b29c-5a4610a420cf" name="Login" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="edca0ed9-6cac-44ac-8181-78a6172c87ab" />
+        <additions>
+          <include Id="8d1101cd-511c-44ab-b788-c6f3be01470b">
+            <useCaseMoniker Id="43fd348d-5742-4017-9f13-227410baf40a" LastKnownName="Navigates to coresident view" />
+            <elementDefinition Id="9a8319b0-3690-4020-8f07-87810672eae4" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="9cfd3c5a-2743-4012-b64d-3c9428650d55" LastKnownName="Coresident Registration" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="6e48721f-ba4d-418e-8462-8e1839066869" name="Add coresident  button" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3d94b8d6-b7a0-41a3-9435-ec2a08f49191" />
+        <targetEnds>
+          <association Id="23a7f141-f10d-498e-845d-291cb10fd9a8" isDerived="false" sourceEndRoleName="Add cohabitor button" targetEndRoleName="Fills all the fields" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8d78ebf9-a3f1-4aa4-9f77-db390e60b3f3" LastKnownName="Fills all the fields" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="59cdf8c6-f4eb-4cf0-bdda-315b0bb00dd1" name="Add cohabitor button" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b3d503a2-7da4-4a69-9830-0630d774ae02" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ffc9e178-d2aa-4fd1-b7b9-2d72608e104f" name="Fills all the fields" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a58e6a81-bd5c-40b2-87c5-25690ef7bc01" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="17f06548-5152-4028-9603-7dcd1d959385" />
+          </association>
+        </targetEnds>
+        <extendedCases>
+          <extend Id="a86e3acc-8883-4aee-96ff-aa65864da742">
+            <useCaseMoniker Id="11296b1b-8ded-4a19-a952-3672dd0aa185" LastKnownName="Coresident Add" />
+            <elementDefinition Id="76f8aeb9-d0c4-44f9-9e17-91599b6babb6" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="9cfd3c5a-2743-4012-b64d-3c9428650d55" LastKnownName="Coresident Registration" />
         </subjects>
       </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <useCase Id="2006e1d5-7dcb-4412-acf9-2c5962a97a70" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="f0afe597-af73-409d-8541-cb86f56e61ed" />
+      <useCase Id="8d78ebf9-a3f1-4aa4-9f77-db390e60b3f3" name="Fills all the fields" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c439f5ab-0fb1-4f10-8360-263ac7f41caa" />
+        <targetEnds>
+          <association Id="4b5c4408-4f44-4552-b39e-4b601a2796a8" isDerived="false" sourceEndRoleName="Fills all the fields" targetEndRoleName="Save Button" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d6ba67b4-94d3-4b28-bfe3-5a71b01a454b" LastKnownName="Save Button" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="67a6a905-7648-404a-8b46-cf1693a5ba46" name="Fills all the fields" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7954f4f5-94b6-49e9-9dbe-edb2e3eb3745" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3d76f741-4906-4aca-8755-f25e7c6c7279" name="Save Button" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3df23b77-bf6f-450e-bd62-259f181c308e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0c1a0c97-449f-4786-8344-72b362811110" />
+          </association>
+        </targetEnds>
         <subjects>
-          <subsystemMoniker Id="9cfd3c5a-2743-4012-b64d-3c9428650d55" LastKnownName="Registration" />
+          <subsystemMoniker Id="9cfd3c5a-2743-4012-b64d-3c9428650d55" LastKnownName="Coresident Registration" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="11296b1b-8ded-4a19-a952-3672dd0aa185" name="Coresident Add" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2e0f119b-f2cb-4e2e-b427-fe293e861045" />
+        <additions>
+          <include Id="bc8a9cf5-cec8-4f86-9eb1-98955ea68595">
+            <useCaseMoniker Id="d6ba67b4-94d3-4b28-bfe3-5a71b01a454b" LastKnownName="Save Button" />
+            <elementDefinition Id="a2c985c2-c068-4ddd-a0ff-f2e1aa035947" />
+          </include>
+          <include Id="65971492-dd48-4fb6-8bfc-252347960e84">
+            <useCaseMoniker Id="8d78ebf9-a3f1-4aa4-9f77-db390e60b3f3" LastKnownName="Fills all the fields" />
+            <elementDefinition Id="c7bf1612-4f22-4898-b5c2-de77f9bb5704" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="9cfd3c5a-2743-4012-b64d-3c9428650d55" LastKnownName="Coresident Registration" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="d6ba67b4-94d3-4b28-bfe3-5a71b01a454b" name="Save Button" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d6998e0b-55e8-4056-aeb0-8be402b61819" />
+        <extendedCases>
+          <extend Id="48745a9b-4291-4080-8bd6-ff5f37eb4d8f">
+            <useCaseMoniker Id="61bd836c-d359-4568-8e72-e8a2e5853cab" LastKnownName="Coresident Approval" />
+            <elementDefinition Id="a977112f-5b7e-45e7-8a0f-3012c88abfd7" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="9cfd3c5a-2743-4012-b64d-3c9428650d55" LastKnownName="Coresident Registration" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d0b948ed-6bce-4ecb-b608-5ca79b90d233" name="I am a another Use Case" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="71a266bf-f8e2-46b7-bde8-976a27d8274a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="3b844720-9e52-4971-8f81-a4901d264fe1" name="I am a User Action" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="652c23a7-a87f-465c-881c-02975c8824ca" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="3df2511c-f4de-4b02-b516-86045d073bbf" name="BoarMember" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9e9bfea2-1317-4ff6-a760-d86e1d3f9566" />
+        <targetEnds>
+          <association Id="cab00622-a61b-4935-a2a2-4e750739e354" isDerived="false" sourceEndRoleName="BoarMember" targetEndRoleName="Login" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="476b6710-c061-4bc9-bc80-be542ac6bd31" LastKnownName="Login" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="eacbd3f8-0636-43fa-a510-4f6c7800b667" name="BoarMember" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e78916d7-f37a-49ce-baa5-564f3a5c26bc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cf7022d8-c201-4b7e-a0ee-e6a0fe79d76d" name="Login" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="27a210cd-dcf0-463a-b181-566edffd4413" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="93af7c02-d3b8-4d13-aa7f-ab451304bebf" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="1b128b00-438b-49d3-b5da-8c3c3e949504" name="Resident Creation - Board Member" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="86c52364-3b65-44a7-a5c7-855199ef2ff1" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="476b6710-c061-4bc9-bc80-be542ac6bd31" name="Login" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f7580d68-c4cd-47e9-a105-ca6629890087" />
+        <extendedCases>
+          <extend Id="9b4f8063-a61f-430b-a642-743aeee95990">
+            <useCaseMoniker Id="c3730f0d-ffd2-4e08-b2d3-f0d91f14ed63" LastKnownName="Navigates to Resident Management" />
+            <elementDefinition Id="890fd774-041e-4487-a999-f3df39e9dfde" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="1b128b00-438b-49d3-b5da-8c3c3e949504" LastKnownName="Resident Creation - Board Member" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="c3730f0d-ffd2-4e08-b2d3-f0d91f14ed63" name="Navigates to Resident Management" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b52c7581-e007-441a-9cec-87c28ff54400" />
+        <targetEnds>
+          <association Id="d0a65496-e299-491a-ac22-47a1b198a5e8" isDerived="false" sourceEndRoleName="Navigates to Resident Management" targetEndRoleName="Resident Creation Button" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="3b4c6286-9eb4-4792-851e-dfb3fda656af" LastKnownName="Resident Creation Button" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7aaac82a-259f-4add-997d-86198b323977" name="Navigates to Resident Management" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2ab4bea2-cee3-4b48-89ba-b1c02aeefb2f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fd3dfd3c-6bca-4784-a518-8832e83f608d" name="Resident Creation Button" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4abba202-fe1b-479f-97fc-fe2deb472e75" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="785d5315-4cff-446e-836b-8d3f72a927b7" />
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker Id="1b128b00-438b-49d3-b5da-8c3c3e949504" LastKnownName="Resident Creation - Board Member" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="3b4c6286-9eb4-4792-851e-dfb3fda656af" name="Resident Creation Button" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="25380ac2-3080-42b2-b9b5-8cff543657e2" />
+        <targetEnds>
+          <association Id="f947a06e-8342-4b4a-8b8b-38690fb78580" isDerived="false" sourceEndRoleName="Resident Creation Button" targetEndRoleName="Fills all the fields" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="02fe8111-9dd3-42a2-9ad0-c1459d0ba801" LastKnownName="Fills all the fields" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="26fc9956-305c-4243-8897-fe1c19b92f47" name="Resident Creation Button" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e13047d6-8933-41d8-90c9-b137d4ea4ab5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a1751019-24ea-4d66-b961-633570e8e7ff" name="Fills all the fields" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="adb34855-eea1-474d-84c0-b9208a06416f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="60c3dc84-f758-46c1-a1da-3720bf4143ad" />
+          </association>
+        </targetEnds>
+        <extendedCases>
+          <extend Id="4dd13a0f-a44c-4a2d-af8e-7f95d824ed8e">
+            <useCaseMoniker Id="91aae1b8-eda3-4822-a997-5a1fabd6f6c1" LastKnownName="Resident Creation View" />
+            <elementDefinition Id="2b7e854c-2a86-44d3-98d3-60feb660474c" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="1b128b00-438b-49d3-b5da-8c3c3e949504" LastKnownName="Resident Creation - Board Member" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="91aae1b8-eda3-4822-a997-5a1fabd6f6c1" name="Resident Creation View" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="87c6e2c7-2250-49d7-ad70-d0e4c27e9645" />
+        <additions>
+          <include Id="3e081877-2e49-4f60-aa36-950a456ede4e">
+            <useCaseMoniker Id="b2ba42c5-8b77-49dc-b312-8514d5703681" LastKnownName="Create button" />
+            <elementDefinition Id="7f830189-fbb1-4da4-a1fd-c7b3e838322a" />
+          </include>
+          <include Id="8be936bd-6314-4857-9259-4783d442bb81">
+            <useCaseMoniker Id="02fe8111-9dd3-42a2-9ad0-c1459d0ba801" LastKnownName="Fills all the fields" />
+            <elementDefinition Id="a27a8fc7-e160-4689-8068-82f8be287629" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="1b128b00-438b-49d3-b5da-8c3c3e949504" LastKnownName="Resident Creation - Board Member" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="02fe8111-9dd3-42a2-9ad0-c1459d0ba801" name="Fills all the fields" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1b508f23-acbd-49b2-850c-c64b641c724a" />
+        <targetEnds>
+          <association Id="6ca31215-ebbc-4a52-8e4c-fe44280ea3bf" isDerived="false" sourceEndRoleName="Fills all the fields" targetEndRoleName="Create button" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b2ba42c5-8b77-49dc-b312-8514d5703681" LastKnownName="Create button" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="337a53e2-2448-419d-89b9-f0320e0327ab" name="Fills all the fields" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9ab8a2e6-a998-4270-8c55-66413f91a69c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3c3b5d10-8af4-4af2-98e8-0c5f2dc3a1ba" name="Create button" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="74bb726c-a5a8-4f1d-8c7b-c5db07151e5c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="03f987a4-c5f1-49f9-9c06-997ca58afd37" />
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker Id="1b128b00-438b-49d3-b5da-8c3c3e949504" LastKnownName="Resident Creation - Board Member" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="b2ba42c5-8b77-49dc-b312-8514d5703681" name="Create button" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f397cb58-3241-4ab4-bf18-9e066ce8db76" />
+        <subjects>
+          <subsystemMoniker Id="1b128b00-438b-49d3-b5da-8c3c3e949504" LastKnownName="Resident Creation - Board Member" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8714d595-dd62-48be-86e0-b61b8ceb857c" name="Board Member Resident Creation" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fe8df129-23ba-460d-b07d-b0ff1701b211" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="63f5479f-fa4a-464a-bc65-1e9fe490682c" name="Board Member" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e870fd93-bb7e-47e4-9c07-2dbfcb479f9e" />
+        <targetEnds>
+          <association Id="ed695e2c-752c-453e-b5d1-2ed5f69b19b4" isDerived="false" sourceEndRoleName="Board Member" targetEndRoleName="Login" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="4b9b473e-c889-4226-a7dc-87d285d55207" LastKnownName="Login" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5a41522f-aeb9-4320-8102-3d617767a287" name="Board Member" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d216c908-5988-4766-8405-8e8f98bb3779" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0a128a9d-162b-4a9d-99ec-f0a352e3337c" name="Login" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6ef85e8b-ce58-4435-a172-1b5a79c853f5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0ae7747e-edec-4ef8-a338-1f36b2796e50" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="dc972244-4adb-4741-acb2-a6274a6b79f5" name="Coresident Approval" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3cdab28c-fbd3-4e85-828e-5ffe0909b86c" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f46e51a2-a698-487c-9334-bfbfab0f8518" name="Coresident Approval" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7eedc5e8-d7f0-4924-8cae-39f2988ea351" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="61bd836c-d359-4568-8e72-e8a2e5853cab" name="Coresident Approval" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ea10493d-7495-43c5-bea1-29306156e03e" />
+        <subjects>
+          <subsystemMoniker Id="9cfd3c5a-2743-4012-b64d-3c9428650d55" LastKnownName="Coresident Registration" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="4b9b473e-c889-4226-a7dc-87d285d55207" name="Login" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="752e886d-4456-462a-8fbf-fb0796a1b737" />
+        <additions>
+          <include Id="ebc86519-c574-4815-9d91-80a14b485dbb">
+            <useCaseMoniker Id="c65ec114-4dc0-4f74-9441-005bc7e3db8f" LastKnownName="Navigates to Residents Approval view" />
+            <elementDefinition Id="17a696e2-88ac-4207-a8b5-4fe43a5ebce7" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="dc972244-4adb-4741-acb2-a6274a6b79f5" LastKnownName="Coresident Approval" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="c65ec114-4dc0-4f74-9441-005bc7e3db8f" name="Navigates to Residents Approval view" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="348bebc4-9955-4625-8e1d-2e706c02bbd7" />
+        <targetEnds>
+          <association Id="10900a30-f31d-49bf-8d31-87aa3481230b" isDerived="false" sourceEndRoleName="Navigates to Residents Approval view" targetEndRoleName="Selects the resident from the list" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="75dbe778-4403-4d07-a008-58bf0a5e8f4d" LastKnownName="Selects the resident from the list" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7e560aac-33a6-4cf3-932b-c15ef1cbff38" name="Navigates to Residents Approval view" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="89a75b6a-4b5a-41b2-91d6-cf798d2322b9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="116dd51d-ab46-4f16-816a-ccff9713fad8" name="Selects the resident from the list" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ac7b8c07-165e-4e15-a891-1b245642c6f5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d2ca1e7f-1e92-41e2-bff7-ffaddd4e4a42" />
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker Id="dc972244-4adb-4741-acb2-a6274a6b79f5" LastKnownName="Coresident Approval" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="75dbe778-4403-4d07-a008-58bf0a5e8f4d" name="Selects the resident from the list" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7eb65b87-6d66-4f94-9eee-0ab191ae31f1" />
+        <targetEnds>
+          <association Id="5ed37336-88da-41d1-9ecf-169ece585ae8" isDerived="false" sourceEndRoleName="Selects the resident from the list" targetEndRoleName="Fills the information" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="75cff90d-5e6a-4bc7-a65a-a54bb14503a8" LastKnownName="Fills the information" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2b4f9a25-5339-4526-8541-85995eaf394f" name="Selects the resident from the list" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c0ecb228-3400-41b9-a84a-3d98be5ae5a6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2d015fba-58df-4b81-8133-31cecb08c2f4" name="Fills the information" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="abf7188e-54ba-4286-b21e-68e140818afa" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9ed41a98-1cad-4ea3-a842-26646375a07a" />
+          </association>
+        </targetEnds>
+        <extendedCases>
+          <extend Id="21efd616-c1ad-4b30-85b6-d1aefe906217">
+            <useCaseMoniker Id="38a4d2d4-a76a-4069-9002-fae5d589aaf4" LastKnownName="User Credentials view" />
+            <elementDefinition Id="6b807bfa-15f2-45d4-ae41-8cc1faef3c4e" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="dc972244-4adb-4741-acb2-a6274a6b79f5" LastKnownName="Coresident Approval" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="38a4d2d4-a76a-4069-9002-fae5d589aaf4" name="User Credentials view" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0845c08c-c248-4c00-be35-99475a428258" />
+        <additions>
+          <include Id="2ab17115-ff5b-4dcb-b5a0-572cd440d5b6">
+            <useCaseMoniker Id="b8fad597-4e4c-4cdb-8b8f-deade3c11915" LastKnownName="Save button" />
+            <elementDefinition Id="1373d0a4-b786-48d6-8f23-4c52f832a120" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="dc972244-4adb-4741-acb2-a6274a6b79f5" LastKnownName="Coresident Approval" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="75cff90d-5e6a-4bc7-a65a-a54bb14503a8" name="Fills the information" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7baf5052-b32d-4408-a04c-83af426496e9" />
+        <targetEnds>
+          <association Id="79165f9e-90a3-495e-845c-8b576161bc9b" isDerived="false" sourceEndRoleName="Fills the information" targetEndRoleName="Save button" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b8fad597-4e4c-4cdb-8b8f-deade3c11915" LastKnownName="Save button" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4a7d66db-d1a0-4573-820a-5c0fb1c92fe1" name="Fills the information" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7eb506a1-7145-42a4-99a5-da9441d00d62" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7d4ce25b-d4c9-49c4-9267-df8fda6672f6" name="Save button" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7a2bf4e5-ffd9-4500-b470-6bec084a8425" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="99b438dc-f3ff-4ef5-9010-b0537ee4c1cd" />
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker Id="dc972244-4adb-4741-acb2-a6274a6b79f5" LastKnownName="Coresident Approval" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="b8fad597-4e4c-4cdb-8b8f-deade3c11915" name="Save button" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bc12c223-fac1-4fa9-9a6a-1f80a950dedd" />
+        <subjects>
+          <subsystemMoniker Id="dc972244-4adb-4741-acb2-a6274a6b79f5" LastKnownName="Coresident Approval" />
         </subjects>
       </useCase>
     </packageHasNamedElement>
   </packagedElements>
   <package Id="52544aff-df3d-4d9b-a16d-ed46f704ea74" name="UPAnalysisOstbanehus">
     <elementDefinition Id="693932f1-ffc9-4e07-b5af-e807937cb4c5" />
+    <profileInstances>
+      <packageHasProfileInstances Id="2f245c17-b0dd-4934-8a2d-c4d0dfd7cbab">
+        <profileInstance Id="bbcf0790-1173-487a-a609-5b0a2546ba71" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="75b6232f-f682-4eca-9c39-8dbf2f981b17">
+        <profileInstance Id="743cc349-f067-4217-a3ae-8c1decb36e19" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </useCaseModelRoot>

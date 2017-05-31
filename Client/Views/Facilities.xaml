@@ -1,14 +1,62 @@
 ﻿<Page
-    x:Class="Client.Views.Facilities"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Client.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    xmlns:View_Models="using:Client.View_Models"
+    x:Class="Client.Views.Facilities"
+    mc:Ignorable="d" Height="620" Width="850">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-  
-        
+        <Grid.DataContext>
+            <View_Models:ResidentViewModel/>
+        </Grid.DataContext>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+            <SplitView x:Name="SplitView" 
+                DisplayMode="CompactOverlay" 
+                OpenPaneLength="249" 
+                CompactPaneLength="100" 
+                HorizontalAlignment="Left" Width="75" Height="760">
+                <SplitView.Pane>
+                    <ListBox SelectionMode="Single" 
+                        x:Name="IconsListBox" 
+                        SelectionChanged="IconsListBox_SelectionChanged" Margin="0,0,174,0" HorizontalAlignment="Left" VerticalAlignment="Center" Height="760" Width="75" HorizontalContentAlignment="Left">
+                        <ListBoxItem x:Name="LogOut" HorizontalContentAlignment="Center" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="75" GotFocus="LogOut_GotFocus" Margin="0,0,0,125">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE72D;" Height="38" Width="35" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem x:Name="Apartment" GotFocus="Apartment_GotFocus">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE10F;" />
+                            </StackPanel>
+                        </ListBoxItem>
+
+                        <ListBoxItem x:Name="GeneralOverview" GotFocus="GeneralOverview_GotFocus">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE1C3;" />
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem x:Name="CoResidents" GotFocus="CoResidents_GotFocus">
+                            <StackPanel Orientation="Horizontal" Width="38">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE125;" Height="35" Width="34" />
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem x:Name="facilities">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE71D;" Height="35" Width="34" />
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem x:Name="Messages">
+                            <StackPanel Orientation="Horizontal" Width="39">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE119;" Height="35" Width="38" />
+                            </StackPanel>
+                        </ListBoxItem>
+                    </ListBox>
+                </SplitView.Pane>
+            </SplitView>
+        </StackPanel>
+
     </Grid>
 </Page>

@@ -99,20 +99,20 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="a499fc4c-5cd0-4716-9f1a-6a7cd2a0f5f6"
+            Id="5798c1bd-b046-40f2-b973-93e46c235c98"
             isDerived="false"
             sourceEndRoleName="User"
-            targetEndRoleName="User fills the boxes"
+            targetEndRoleName="Resident Registration1"
             isLeaf="false"
             isAbstract="false">
             <useCaseMoniker
-              Id="cf7aeff8-bc9c-4536-bdd9-03960d9a7261"
-              LastKnownName="User fills the boxes"
+              Id="edca0ed9-6cac-44ac-8181-78a6172c87ab"
+              LastKnownName="Login"
               LastKnownLocation="UPAnalysisOstbanehus.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="a35c9088-777e-43bc-bf0c-e901aff49aad"
+                  Id="779bf5b0-92d0-490a-9432-468071671de3"
                   name="User"
                   isLeaf="false"
                   isStatic="false"
@@ -125,8 +125,8 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="2d056167-546f-4e8c-b72b-7fe39b19d900"
-                  name="User fills the boxes"
+                  Id="63458041-3014-4184-b78e-2111715d46b3"
+                  name="Resident Registration1"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -394,7 +394,7 @@
     <packageHasNamedElement>
       <useCase
         Id="281195bd-7c4b-4e15-a6a5-9732532bf18d"
-        name="Resident Registration"
+        name="Coresident Registration"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
@@ -1398,7 +1398,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="cf7aeff8-bc9c-4536-bdd9-03960d9a7261"
-              LastKnownName="User fills the boxes"
+              LastKnownName="Navigates to coresident view"
               LastKnownLocation="UPAnalysisOstbanehus.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -1454,13 +1454,54 @@
     <packageHasNamedElement>
       <useCase
         Id="cf7aeff8-bc9c-4536-bdd9-03960d9a7261"
-        name="User fills the boxes"
+        name="Navigates to coresident view"
         isAbstract="false"
         isLeaf="false">
+        <targetEnds>
+          <association
+            Id="67973e6e-3f6d-499a-81bc-d887d51cad39"
+            isDerived="false"
+            sourceEndRoleName="Navigates to Cohabitor view"
+            targetEndRoleName="Add cohabitor button"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3d94b8d6-b7a0-41a3-9435-ec2a08f49191"
+              LastKnownName="Add coresident  button"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7d09c318-7174-43e0-bd69-bdffc0c64f89"
+                  name="Navigates to Cohabitor view"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f37986aa-8a4b-4198-9926-e8276fab59f6"
+                  name="Add cohabitor button"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <subjects>
           <subsystemMoniker
             Id="18569add-5cb4-4d87-a7ae-2621204b8d77"
-            LastKnownName="Registration"
+            LastKnownName="Coresident Registration"
             LastKnownLocation="UPAnalysisOstbanehus.uml" />
         </subjects>
       </useCase>
@@ -1601,7 +1642,7 @@
     <packageHasNamedElement>
       <subsystem
         Id="18569add-5cb4-4d87-a7ae-2621204b8d77"
-        name="Registration"
+        name="Coresident Registration"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false" />
@@ -1610,14 +1651,7 @@
       <useCase
         Id="f0afe597-af73-409d-8541-cb86f56e61ed"
         isAbstract="false"
-        isLeaf="false">
-        <subjects>
-          <subsystemMoniker
-            Id="18569add-5cb4-4d87-a7ae-2621204b8d77"
-            LastKnownName="Registration"
-            LastKnownLocation="UPAnalysisOstbanehus.uml" />
-        </subjects>
-      </useCase>
+        isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
@@ -2163,6 +2197,839 @@
           </operation>
         </ownedOperationsInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="edca0ed9-6cac-44ac-8181-78a6172c87ab"
+        name="Login"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="9a8319b0-3690-4020-8f07-87810672eae4">
+            <useCaseMoniker
+              Id="cf7aeff8-bc9c-4536-bdd9-03960d9a7261"
+              LastKnownName="Navigates to coresident view"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="18569add-5cb4-4d87-a7ae-2621204b8d77"
+            LastKnownName="Coresident Registration"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3d94b8d6-b7a0-41a3-9435-ec2a08f49191"
+        name="Add coresident  button"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="17f06548-5152-4028-9603-7dcd1d959385"
+            isDerived="false"
+            sourceEndRoleName="Add cohabitor button"
+            targetEndRoleName="Fills all the fields"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c439f5ab-0fb1-4f10-8360-263ac7f41caa"
+              LastKnownName="Fills all the fields"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b3d503a2-7da4-4a69-9830-0630d774ae02"
+                  name="Add cohabitor button"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a58e6a81-bd5c-40b2-87c5-25690ef7bc01"
+                  name="Fills all the fields"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <extendedCases>
+          <extend
+            Id="76f8aeb9-d0c4-44f9-9e17-91599b6babb6">
+            <useCaseMoniker
+              Id="2e0f119b-f2cb-4e2e-b427-fe293e861045"
+              LastKnownName="Coresident Add"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="18569add-5cb4-4d87-a7ae-2621204b8d77"
+            LastKnownName="Coresident Registration"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c439f5ab-0fb1-4f10-8360-263ac7f41caa"
+        name="Fills all the fields"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="0c1a0c97-449f-4786-8344-72b362811110"
+            isDerived="false"
+            sourceEndRoleName="Fills all the fields"
+            targetEndRoleName="Save Button"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d6998e0b-55e8-4056-aeb0-8be402b61819"
+              LastKnownName="Save Button"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7954f4f5-94b6-49e9-9dbe-edb2e3eb3745"
+                  name="Fills all the fields"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3df23b77-bf6f-450e-bd62-259f181c308e"
+                  name="Save Button"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker
+            Id="18569add-5cb4-4d87-a7ae-2621204b8d77"
+            LastKnownName="Coresident Registration"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2e0f119b-f2cb-4e2e-b427-fe293e861045"
+        name="Coresident Add"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="a2c985c2-c068-4ddd-a0ff-f2e1aa035947">
+            <useCaseMoniker
+              Id="d6998e0b-55e8-4056-aeb0-8be402b61819"
+              LastKnownName="Save Button"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+          </include>
+          <include
+            Id="c7bf1612-4f22-4898-b5c2-de77f9bb5704">
+            <useCaseMoniker
+              Id="c439f5ab-0fb1-4f10-8360-263ac7f41caa"
+              LastKnownName="Fills all the fields"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="18569add-5cb4-4d87-a7ae-2621204b8d77"
+            LastKnownName="Coresident Registration"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d6998e0b-55e8-4056-aeb0-8be402b61819"
+        name="Save Button"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="a977112f-5b7e-45e7-8a0f-3012c88abfd7">
+            <useCaseMoniker
+              Id="ea10493d-7495-43c5-bea1-29306156e03e"
+              LastKnownName="Coresident Approval"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="18569add-5cb4-4d87-a7ae-2621204b8d77"
+            LastKnownName="Coresident Registration"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="71a266bf-f8e2-46b7-bde8-976a27d8274a"
+        name="I am a another Use Case"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="652c23a7-a87f-465c-881c-02975c8824ca"
+        name="I am a User Action"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="9e9bfea2-1317-4ff6-a760-d86e1d3f9566"
+        name="BoarMember"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="93af7c02-d3b8-4d13-aa7f-ab451304bebf"
+            isDerived="false"
+            sourceEndRoleName="BoarMember"
+            targetEndRoleName="Login"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f7580d68-c4cd-47e9-a105-ca6629890087"
+              LastKnownName="Login"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e78916d7-f37a-49ce-baa5-564f3a5c26bc"
+                  name="BoarMember"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="27a210cd-dcf0-463a-b181-566edffd4413"
+                  name="Login"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="86c52364-3b65-44a7-a5c7-855199ef2ff1"
+        name="Resident Creation - Board Member"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f7580d68-c4cd-47e9-a105-ca6629890087"
+        name="Login"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="890fd774-041e-4487-a999-f3df39e9dfde">
+            <useCaseMoniker
+              Id="b52c7581-e007-441a-9cec-87c28ff54400"
+              LastKnownName="Navigates to Resident Management"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="86c52364-3b65-44a7-a5c7-855199ef2ff1"
+            LastKnownName="Resident Creation - Board Member"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b52c7581-e007-441a-9cec-87c28ff54400"
+        name="Navigates to Resident Management"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="785d5315-4cff-446e-836b-8d3f72a927b7"
+            isDerived="false"
+            sourceEndRoleName="Navigates to Resident Management"
+            targetEndRoleName="Resident Creation Button"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="25380ac2-3080-42b2-b9b5-8cff543657e2"
+              LastKnownName="Resident Creation Button"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2ab4bea2-cee3-4b48-89ba-b1c02aeefb2f"
+                  name="Navigates to Resident Management"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4abba202-fe1b-479f-97fc-fe2deb472e75"
+                  name="Resident Creation Button"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker
+            Id="86c52364-3b65-44a7-a5c7-855199ef2ff1"
+            LastKnownName="Resident Creation - Board Member"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="25380ac2-3080-42b2-b9b5-8cff543657e2"
+        name="Resident Creation Button"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="60c3dc84-f758-46c1-a1da-3720bf4143ad"
+            isDerived="false"
+            sourceEndRoleName="Resident Creation Button"
+            targetEndRoleName="Fills all the fields"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="1b508f23-acbd-49b2-850c-c64b641c724a"
+              LastKnownName="Fills all the fields"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e13047d6-8933-41d8-90c9-b137d4ea4ab5"
+                  name="Resident Creation Button"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="adb34855-eea1-474d-84c0-b9208a06416f"
+                  name="Fills all the fields"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <extendedCases>
+          <extend
+            Id="2b7e854c-2a86-44d3-98d3-60feb660474c">
+            <useCaseMoniker
+              Id="87c6e2c7-2250-49d7-ad70-d0e4c27e9645"
+              LastKnownName="Resident Creation View"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="86c52364-3b65-44a7-a5c7-855199ef2ff1"
+            LastKnownName="Resident Creation - Board Member"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="87c6e2c7-2250-49d7-ad70-d0e4c27e9645"
+        name="Resident Creation View"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="7f830189-fbb1-4da4-a1fd-c7b3e838322a">
+            <useCaseMoniker
+              Id="f397cb58-3241-4ab4-bf18-9e066ce8db76"
+              LastKnownName="Create button"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+          </include>
+          <include
+            Id="a27a8fc7-e160-4689-8068-82f8be287629">
+            <useCaseMoniker
+              Id="1b508f23-acbd-49b2-850c-c64b641c724a"
+              LastKnownName="Fills all the fields"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="86c52364-3b65-44a7-a5c7-855199ef2ff1"
+            LastKnownName="Resident Creation - Board Member"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1b508f23-acbd-49b2-850c-c64b641c724a"
+        name="Fills all the fields"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="03f987a4-c5f1-49f9-9c06-997ca58afd37"
+            isDerived="false"
+            sourceEndRoleName="Fills all the fields"
+            targetEndRoleName="Create button"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f397cb58-3241-4ab4-bf18-9e066ce8db76"
+              LastKnownName="Create button"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9ab8a2e6-a998-4270-8c55-66413f91a69c"
+                  name="Fills all the fields"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="74bb726c-a5a8-4f1d-8c7b-c5db07151e5c"
+                  name="Create button"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker
+            Id="86c52364-3b65-44a7-a5c7-855199ef2ff1"
+            LastKnownName="Resident Creation - Board Member"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f397cb58-3241-4ab4-bf18-9e066ce8db76"
+        name="Create button"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="86c52364-3b65-44a7-a5c7-855199ef2ff1"
+            LastKnownName="Resident Creation - Board Member"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="fe8df129-23ba-460d-b07d-b0ff1701b211"
+        name="Board Member Resident Creation"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="e870fd93-bb7e-47e4-9c07-2dbfcb479f9e"
+        name="Board Member"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="0ae7747e-edec-4ef8-a338-1f36b2796e50"
+            isDerived="false"
+            sourceEndRoleName="Board Member"
+            targetEndRoleName="Login"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="752e886d-4456-462a-8fbf-fb0796a1b737"
+              LastKnownName="Login"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d216c908-5988-4766-8405-8e8f98bb3779"
+                  name="Board Member"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6ef85e8b-ce58-4435-a172-1b5a79c853f5"
+                  name="Login"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="3cdab28c-fbd3-4e85-828e-5ffe0909b86c"
+        name="Coresident Approval"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7eedc5e8-d7f0-4924-8cae-39f2988ea351"
+        name="Coresident Approval"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ea10493d-7495-43c5-bea1-29306156e03e"
+        name="Coresident Approval"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="18569add-5cb4-4d87-a7ae-2621204b8d77"
+            LastKnownName="Coresident Registration"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="752e886d-4456-462a-8fbf-fb0796a1b737"
+        name="Login"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="17a696e2-88ac-4207-a8b5-4fe43a5ebce7">
+            <useCaseMoniker
+              Id="348bebc4-9955-4625-8e1d-2e706c02bbd7"
+              LastKnownName="Navigates to Residents Approval view"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="3cdab28c-fbd3-4e85-828e-5ffe0909b86c"
+            LastKnownName="Coresident Approval"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="348bebc4-9955-4625-8e1d-2e706c02bbd7"
+        name="Navigates to Residents Approval view"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="d2ca1e7f-1e92-41e2-bff7-ffaddd4e4a42"
+            isDerived="false"
+            sourceEndRoleName="Navigates to Residents Approval view"
+            targetEndRoleName="Selects the resident from the list"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="7eb65b87-6d66-4f94-9eee-0ab191ae31f1"
+              LastKnownName="Selects the resident from the list"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="89a75b6a-4b5a-41b2-91d6-cf798d2322b9"
+                  name="Navigates to Residents Approval view"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ac7b8c07-165e-4e15-a891-1b245642c6f5"
+                  name="Selects the resident from the list"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker
+            Id="3cdab28c-fbd3-4e85-828e-5ffe0909b86c"
+            LastKnownName="Coresident Approval"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7eb65b87-6d66-4f94-9eee-0ab191ae31f1"
+        name="Selects the resident from the list"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="9ed41a98-1cad-4ea3-a842-26646375a07a"
+            isDerived="false"
+            sourceEndRoleName="Selects the resident from the list"
+            targetEndRoleName="Fills the information"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="7baf5052-b32d-4408-a04c-83af426496e9"
+              LastKnownName="Fills the information"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c0ecb228-3400-41b9-a84a-3d98be5ae5a6"
+                  name="Selects the resident from the list"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="abf7188e-54ba-4286-b21e-68e140818afa"
+                  name="Fills the information"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <extendedCases>
+          <extend
+            Id="6b807bfa-15f2-45d4-ae41-8cc1faef3c4e">
+            <useCaseMoniker
+              Id="0845c08c-c248-4c00-be35-99475a428258"
+              LastKnownName="User Credentials view"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="3cdab28c-fbd3-4e85-828e-5ffe0909b86c"
+            LastKnownName="Coresident Approval"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0845c08c-c248-4c00-be35-99475a428258"
+        name="User Credentials view"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="1373d0a4-b786-48d6-8f23-4c52f832a120">
+            <useCaseMoniker
+              Id="bc12c223-fac1-4fa9-9a6a-1f80a950dedd"
+              LastKnownName="Save button"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="3cdab28c-fbd3-4e85-828e-5ffe0909b86c"
+            LastKnownName="Coresident Approval"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0d11bee0-86c3-4e09-84ff-2566e6bdb33d"
+        name="UseCase1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7baf5052-b32d-4408-a04c-83af426496e9"
+        name="Fills the information"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="99b438dc-f3ff-4ef5-9010-b0537ee4c1cd"
+            isDerived="false"
+            sourceEndRoleName="Fills the information"
+            targetEndRoleName="Save button"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="bc12c223-fac1-4fa9-9a6a-1f80a950dedd"
+              LastKnownName="Save button"
+              LastKnownLocation="UPAnalysisOstbanehus.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7eb506a1-7145-42a4-99a5-da9441d00d62"
+                  name="Fills the information"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7a2bf4e5-ffd9-4500-b470-6bec084a8425"
+                  name="Save button"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker
+            Id="3cdab28c-fbd3-4e85-828e-5ffe0909b86c"
+            LastKnownName="Coresident Approval"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="bc12c223-fac1-4fa9-9a6a-1f80a950dedd"
+        name="Save button"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="3cdab28c-fbd3-4e85-828e-5ffe0909b86c"
+            LastKnownName="Coresident Approval"
+            LastKnownLocation="UPAnalysisOstbanehus.uml" />
+        </subjects>
+      </useCase>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

@@ -9,7 +9,7 @@
     xmlns:c1="using:Client.Common"
     xmlns:text="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     x:Class="Client.Views.UserView"
-    mc:Ignorable="d" Height="760" Width="1024"
+    mc:Ignorable="d" Height="Auto" Width="Auto"
     >
     <Page.Resources>
         <c1:ByteArrayImageConverter x:Key="ByteArrayImageConverter"></c1:ByteArrayImageConverter>

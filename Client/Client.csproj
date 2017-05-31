@@ -114,6 +114,7 @@
     <Compile Include="Model\MessageModel.cs" />
     <Compile Include="Model\ResidentModel.cs" />
     <Compile Include="Model\UserSingleton.cs" />
+    <Compile Include="View-Models\ApartmentVidewModel.cs" />
     <Compile Include="View-Models\BoardViewModel.cs" />
     <Compile Include="View-Models\ResidentViewModel.cs" />
     <Compile Include="View-Models\StateViewModel.cs" />
@@ -157,6 +158,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Client_TemporaryKey.pfx" />
     <None Include="Connected Services\HockeyApp\ConnectedService.json" />
   </ItemGroup>

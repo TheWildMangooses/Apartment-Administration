@@ -39,6 +39,5 @@ namespace Client.Model
         #endregion
 
 
-
     }
 }
