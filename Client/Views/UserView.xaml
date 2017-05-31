@@ -2,11 +2,18 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Client.Views"
+    xmlns:c="using:Client"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:View_Models="using:Client.View_Models"
+    xmlns:c1="using:Client.Common"
+    xmlns:text="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     x:Class="Client.Views.UserView"
-    mc:Ignorable="d" Height="760" Width="1024">
+    mc:Ignorable="d" Height="760" Width="1024"
+    >
+    <Page.Resources>
+        <c1:ByteArrayImageConverter x:Key="ByteArrayImageConverter"></c1:ByteArrayImageConverter>
+    </Page.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MaxWidth="1024" MaxHeight="768">
         <Grid.RowDefinitions>
@@ -16,6 +23,9 @@
         <Grid.DataContext>
             <View_Models:UserViewModel/>
         </Grid.DataContext>
+
+
+
 
         <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
             <SplitView x:Name="SplitView" 
@@ -27,37 +37,33 @@
                     <ListBox SelectionMode="Single" 
                         x:Name="IconsListBox" 
                         SelectionChanged="IconsListBox_SelectionChanged" Margin="0,0,174,0" HorizontalAlignment="Left" VerticalAlignment="Center" Height="760" Width="75" HorizontalContentAlignment="Left">
-                        <ListBoxItem x:Name="LogOut" Width="61" Height="63" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <StackPanel Orientation="Horizontal" Width="35" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <ListBoxItem x:Name="LogOut" HorizontalContentAlignment="Center" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="75" GotFocus="LogOut_GotFocus" Margin="0,0,0,125">
+                            <StackPanel Orientation="Horizontal">
                                 <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE72D;" Height="38" Width="35" HorizontalAlignment="Center" VerticalAlignment="Center" />
                             </StackPanel>
                         </ListBoxItem>
-                        <ListBoxItem x:Name="Apartment" Width="68" HorizontalContentAlignment="Center" HorizontalAlignment="Center">
+                        <ListBoxItem x:Name="Apartment" GotFocus="Apartment_GotFocus">
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE10F;" Height="35" Width="34" />
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE10F;" />
                             </StackPanel>
                         </ListBoxItem>
-                        <ListBoxItem x:Name="GeneralOverview" Width="61">
-                            <StackPanel Orientation="Horizontal" Width="34">
-                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE1C3;" Height="35" Width="34" />
+                        
+                        <ListBoxItem x:Name="GeneralOverview" GotFocus="GeneralOverview_GotFocus">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE1C3;" />
                             </StackPanel>
                         </ListBoxItem>
-                        <ListBoxItem x:Name="CoResidents" Width="61">
+                        <ListBoxItem x:Name="CoResidents" GotFocus="CoResidents_GotFocus">
                             <StackPanel Orientation="Horizontal" Width="38">
                                 <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE125;" Height="35" Width="34" />
                             </StackPanel>
                         </ListBoxItem>
-                        <ListBoxItem x:Name="PersonalDetails" Width="61" >
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE136;" Height="35" Width="34" />
-                            </StackPanel>
-                        </ListBoxItem>
-                        <ListBoxItem x:Name="Facilities" Width="61">
+                        <ListBoxItem x:Name="Facilities">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE71d;" Height="35" Width="34" />
                             </StackPanel>
                         </ListBoxItem>
-                        <ListBoxItem x:Name="Messages" Width="61">
+                        <ListBoxItem x:Name="Messages">
                             <StackPanel Orientation="Horizontal" Width="39">
                                 <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE119;" Height="35" Width="38" />
                             </StackPanel>
@@ -70,15 +76,18 @@
         </StackPanel>
         <Grid Height="758" Margin="75,10,0,0" VerticalAlignment="Center" HorizontalAlignment="Center">
             <StackPanel HorizontalAlignment="Center" Height="595" Margin="245,65,195,98" VerticalAlignment="Center" Width="509" Padding="0">
-                <Image x:Name="image" Height="226" Margin="129,30,105,0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="275"/>
+                <Image x:Name="image" Height="226" Source="{Binding Image, Mode=TwoWay}" Margin="129,30,105,0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="275"/>
                 <TextBox x:Name="phone_no" TextWrapping="Wrap" Text="{Binding CurrentResident.Phone_No,Mode=TwoWay}"  Margin="129,30,105,30"/>
                 <TextBox x:Name="email" TextWrapping="Wrap" Text="{Binding CurrentResident.E_Mail,Mode=TwoWay}" Margin="129,0,105,0"/>
                 <DatePicker HorizontalAlignment="Stretch" Header="Move out date request." VerticalAlignment="Stretch" Margin="79,30,55,0"/>
             </StackPanel>
         </Grid>
-        <Button x:Name="button" Content="Save" HorizontalAlignment="Left" Margin="320,690,0,0" VerticalAlignment="Top" Height="60" Width="180"/>
-        <Button x:Name="changeimg" Content="Change picture" HorizontalAlignment="Left" Margin="620,690,0,0" VerticalAlignment="Top" Height="60" Width="180"/>
-
+        <Button x:Name="savedetails" Command="{Binding SaveDetails}" Content="Save" HorizontalAlignment="Left" Margin="320,690,0,0" VerticalAlignment="Top" Height="60" Width="180"/>
+        <Button x:Name="changeimg" Command="{Binding ChangeImage}" Content="Change picture" HorizontalAlignment="Left" Margin="620,690,0,0" VerticalAlignment="Top" Height="60" Width="180"/>
+        
 
     </Grid>
 </Page>
+
+
+    

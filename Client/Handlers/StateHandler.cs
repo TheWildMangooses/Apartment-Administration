@@ -25,16 +25,18 @@ namespace Client.Handlers
             var check = APIController.CheckLogin(StateViewModel.Username, StateViewModel.Password);
             if(check!=null)
             {
-                //TODO: SHOULD SHIT SHOULD COME HERE
+                
                 if (!check.IsAdmin)
                 {
                     //                   StateViewModel.CurrentLoggedUser = check;
                     StateViewModel.StateSingleton.User = check;
+                    StateViewModel.StateSingleton.Resident = APIController.GetOwner(check.R_No);
                     DecideNextView(false);
                 }
                 else
                 {
                     StateViewModel.StateSingleton.User = check;
+                    StateViewModel.StateSingleton.Resident = APIController.GetOwner(check.R_No);
                     DecideNextView(false);
                 }
             }
@@ -46,6 +48,12 @@ namespace Client.Handlers
                 App.NavService.NavigateTo(typeof(BoardMView), null);
             else
                 App.NavService.NavigateTo(typeof(UserView), null);
+        }
+        public void DoLogout()
+        {
+            StateViewModel.StateSingleton.Resident = null;
+            StateViewModel.StateSingleton.User = null;
+            App.NavService.NavigateTo(typeof(Login), null);
         }
 
     }

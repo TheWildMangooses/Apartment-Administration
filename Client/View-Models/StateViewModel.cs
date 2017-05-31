@@ -39,19 +39,9 @@ namespace Client.View_Models
             set { _login = value; }
         }
         public StateHandler StateHandler { get; set; }
-
-//        private UserModel _currentloggeduser;
- //       public UserModel CurrentLoggedUser
- //       {
- //           get { return _currentloggeduser; }
- //           set { _currentloggeduser = value; OnPropertyChanged("CurrentLoggedUser"); }
- //       }
         public StateViewModel()
         {
             StateSingleton = GenericSingleton.Instance;
- //           UserSingleton = UserSingleton.Instance;
- //           UserSingleton.User = CurrentLoggedUser;
- //           UserModel User = CurrentLoggedUser;
             StateHandler = new StateHandler(this);
             Login = new RelayCommand(StateHandler.PrepareLoginPhase);
         }

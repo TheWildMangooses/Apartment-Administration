@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Client.View_Models
 {
-    class BoardViewModel
+    public class BoardViewModel
     {
+
+
+
     }
 }

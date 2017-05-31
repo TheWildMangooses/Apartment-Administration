@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Client.Model
 {
-    class ApartmentModel
+    public class ApartmentModel
     {
 
         private int _ap_no;
         private bool _isfree;
         private int _floor;
-        private string _number;
+        private int _number;
         private int _b_no;
         private int _size;
         private int _no_rooms;

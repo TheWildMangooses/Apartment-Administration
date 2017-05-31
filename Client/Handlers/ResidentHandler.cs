@@ -8,38 +8,22 @@ using Client.View_Models;
 using Client.Model;
 using Client.API;
 using Windows.UI.Popups;
+using Client.Common;
+using Windows.Storage.Pickers;
+using Windows.Storage;
+using System.Collections.ObjectModel;
 
 namespace Client.Handlers
 {
     public class ResidentHandler
     {
-        public UserViewModel UserViewModel { get; set; }
-        public ResidentHandler(UserViewModel _viewmodel) {
-            UserViewModel = _viewmodel;
+        public ResidentViewModel ResidentViewModel { get; set; }
+        public ResidentHandler(ResidentViewModel _viewmodel) {
+            ResidentViewModel = _viewmodel;
         }
-
-        public void GetUserInfo()
+        public async Task<ObservableCollection<ResidentModel>> GetCoResidents(int Parent_Resident)
         {
-            int RNo = UserViewModel.CurrentUser.R_No;
-            try
-            {
-                ResidentModel Owner = APIController.GetOwner(RNo);
-                if(Owner==null)
-                    new MessageDialog("Internal error on processing the data.").ShowAsync();
-                UserViewModel.CurrentResident = Owner;
-            }
-            catch(Exception ex)
-            {
-                new MessageDialog(ex.Message).ShowAsync();
-            }
-
-
+            return new ObservableCollection<ResidentModel>(APIController.GetPeople(Parent_Resident));
         }
-        public void SaveUserInfo()
-        {
-
-        }
-
-
     }
 }

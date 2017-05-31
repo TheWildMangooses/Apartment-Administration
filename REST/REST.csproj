@@ -166,10 +166,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ApartmentsController.cs" />
+    <Compile Include="Controllers\ApartmentsLogController.cs" />
     <Compile Include="Controllers\BuildingsController.cs" />
     <Compile Include="Controllers\FacilitiesController.cs" />
+    <Compile Include="Controllers\FacilitiesLogController.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
     <Compile Include="Controllers\ResidentsController.cs" />
+    <Compile Include="Controllers\ResidentsLogController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -217,6 +220,10 @@
     <Compile Include="Models\Message.cs" />
     <Compile Include="Models\Resident.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models_log\Apartments_log.cs" />
+    <Compile Include="Models_log\Facilities_log.cs" />
+    <Compile Include="Models_log\LogDataContext.cs" />
+    <Compile Include="Models_log\Residents_log.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

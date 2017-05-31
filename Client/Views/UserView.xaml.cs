@@ -12,7 +12,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace Client.Views
@@ -29,7 +28,29 @@ namespace Client.Views
 
         private void IconsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
- 
+    
+                
+
+        }
+
+        private void LogOut_GotFocus(object sender, RoutedEventArgs e)
+        {
+            App.NavService.NavigateTo(typeof(Login), null);
+        }
+
+        private void Apartment_GotFocus(object sender, RoutedEventArgs e)
+        {
+            App.NavService.NavigateTo(typeof(ApartmentView), null);
+        }
+
+        private void GeneralOverview_GotFocus(object sender, RoutedEventArgs e)
+        {
+            App.NavService.NavigateTo(typeof(UserView), null);
+        }
+
+        private void CoResidents_GotFocus(object sender, RoutedEventArgs e)
+        {
+            App.NavService.NavigateTo(typeof(ResidentsView), null);
         }
     }
 }

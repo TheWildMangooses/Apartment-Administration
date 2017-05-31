@@ -10,11 +10,17 @@ namespace Client.Model
     public class GenericSingleton
     {
         private static UserModel _user { get; set; }
+        private static ResidentModel _resident { get; set; }
 
         public UserModel User
         {
             get { return _user; }
             set { _user = value; }
+        }
+        public ResidentModel Resident
+        {
+            get { return _resident; }
+            set { _resident = value; }
         }
         private GenericSingleton()
         {

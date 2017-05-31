@@ -2,28 +2,49 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.Storage;
+using Windows.Storage.Pickers;
 using Windows.Storage.Streams;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Media.Imaging;
 
 namespace Client.Common
 {
-    public class ByteArrayImageConverter
+    public class ByteArrayImageConverter 
     {
-        public async Task<byte[]> ImageToByte(StorageFile file)
+
+        public BitmapImage GetImage(byte[] value)
         {
+            
+            return ByteToImage(value).Result;
+        }
+
+        public byte[] SelectImage()
+        {
+            return ImageToByte().Result;
+        }
+
+        public async Task<byte[]> ImageToByte()
+        {
+            //call this when selecting an image from the picker  
+            FileOpenPicker picker = new FileOpenPicker();
+            picker.FileTypeFilter.Add(".bmp");
+            picker.FileTypeFilter.Add(".png");
+            picker.FileTypeFilter.Add(".jpg");
+            StorageFile file = await picker.PickSingleFileAsync();
             using (var inputStream = await file.OpenSequentialReadAsync())
             {
                 var readStream = inputStream.AsStreamForRead();
-
-                var byteArray = new byte[readStream.Length];
-                await readStream.ReadAsync(byteArray, 0, byteArray.Length);
-                return byteArray;
+                byte[] buffer = new byte[readStream.Length];
+                await readStream.ReadAsync(buffer, 0, buffer.Length);
+                return buffer;
             }
         }
+
+   
 
         public async Task<BitmapImage> ByteToImage(byte[] byteArray)
         {
@@ -34,7 +55,7 @@ namespace Client.Common
                     writer.WriteBytes(byteArray);
                     await writer.StoreAsync();
                 }
-                var image = new BitmapImage();
+                BitmapImage image = new BitmapImage();
                 await image.SetSourceAsync(stream);
                 return image;
             }

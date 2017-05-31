@@ -115,6 +115,7 @@
     <Compile Include="Model\ResidentModel.cs" />
     <Compile Include="Model\UserSingleton.cs" />
     <Compile Include="View-Models\BoardViewModel.cs" />
+    <Compile Include="View-Models\ResidentViewModel.cs" />
     <Compile Include="View-Models\StateViewModel.cs" />
     <Compile Include="View-Models\UserViewModel.cs" />
     <Compile Include="Views\AccountCreationBoardMember.xaml.cs">
@@ -125,6 +126,9 @@
     </Compile>
     <Compile Include="Views\BoardMView.xaml.cs">
       <DependentUpon>BoardMView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditAddResidents.xaml.cs">
+      <DependentUpon>EditAddResidents.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Facilities.xaml.cs">
       <DependentUpon>Facilities.xaml</DependentUpon>
@@ -181,6 +185,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\BoardMView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EditAddResidents.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

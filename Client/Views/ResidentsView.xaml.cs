@@ -30,5 +30,24 @@ namespace Client.Views
         {
 
         }
+        private void LogOut_GotFocus(object sender, RoutedEventArgs e)
+        {
+            App.NavService.NavigateTo(typeof(Login), null);
+        }
+
+        private void Apartment_GotFocus(object sender, RoutedEventArgs e)
+        {
+            App.NavService.NavigateTo(typeof(ApartmentView), null);
+        }
+
+        private void GeneralOverview_GotFocus(object sender, RoutedEventArgs e)
+        {
+            App.NavService.NavigateTo(typeof(UserView), null);
+        }
+
+        private void CoResidents_GotFocus(object sender, RoutedEventArgs e)
+        {
+            App.NavService.NavigateTo(typeof(ResidentsView), null);
+        }
     }
 }

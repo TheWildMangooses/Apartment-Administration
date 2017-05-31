@@ -15,7 +15,7 @@ namespace Client.Model
         private Boolean _isadmin;
         private int _adminLevel;
         private int _r_No;
-
+        private bool _isapproved;
         public UserModel() { }
 
         #region Properties
@@ -49,7 +49,11 @@ namespace Client.Model
             get { return _r_No; }
             set { _r_No = value; }
         }
-
+        public bool IsActive
+        {
+            get { return _isapproved; }
+            set { _isapproved = value; }
+        }
 
 
         #endregion

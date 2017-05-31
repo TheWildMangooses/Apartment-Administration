@@ -20,30 +20,11 @@ namespace Client.Views
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class ApartmentView : Page
+    public sealed partial class EditAddResidents : Page
     {
-        public ApartmentView()
+        public EditAddResidents()
         {
             this.InitializeComponent();
-        }
-        private void LogOut_GotFocus(object sender, RoutedEventArgs e)
-        {
-            App.NavService.NavigateTo(typeof(Login), null);
-        }
-
-        private void Apartment_GotFocus(object sender, RoutedEventArgs e)
-        {
-            App.NavService.NavigateTo(typeof(ApartmentView), null);
-        }
-
-        private void GeneralOverview_GotFocus(object sender, RoutedEventArgs e)
-        {
-            App.NavService.NavigateTo(typeof(UserView), null);
-        }
-
-        private void CoResidents_GotFocus(object sender, RoutedEventArgs e)
-        {
-            App.NavService.NavigateTo(typeof(ResidentsView), null);
         }
     }
 }

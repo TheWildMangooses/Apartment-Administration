@@ -9,11 +9,18 @@ using System.Net;
 using System.Net.Http.Headers;
 using System.ServiceModel.Channels;
 using Windows.UI.Popups;
+using Newtonsoft.Json;
+using System.Collections.ObjectModel;
+using Newtonsoft.Json.Converters;
+using System.Text.RegularExpressions;
 
 namespace Client.API
 {
+
     public class APIController
     {
+       
+
         private const string APIURL = "http://rest20170524020051.azurewebsites.net";
         public static UserModel CheckLogin(string username,string password)
         {
@@ -65,7 +72,7 @@ namespace Client.API
                     if (answer.IsSuccessStatusCode)
                     {
                         var Residents = answer.Content.ReadAsAsync<ResidentModel>().Result;
-                        new MessageDialog(Residents.Ap_No.ToString()).ShowAsync();
+                        
                         return Residents;
                     }
 
@@ -81,6 +88,132 @@ namespace Client.API
             }
 
         }
+
+        public static async Task<bool> LogResident(ResidentModel Resident)
+        {
+
+            HttpClientHandler httphandler = new HttpClientHandler();
+            httphandler.UseDefaultCredentials = true;
+            using (HttpClient client = new HttpClient(httphandler))
+            {
+                client.BaseAddress = new Uri(APIURL);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                try
+                {
+                    string postBody = JsonConvert.SerializeObject(Resident, Formatting.None, new IsoDateTimeConverter() { DateTimeFormat = "yyyy-MM-dd" });
+                    var answer = client.PostAsync("api/ResidentsLog", new StringContent(postBody, Encoding.UTF8, "application/json")).Result;
+                    if (answer.IsSuccessStatusCode)
+                        return true;
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
+
+            }
+            return false;
+        }
+        public static async Task<bool> LogApartment(ApartmentModel Apartment)
+        {
+            HttpClientHandler httphandler = new HttpClientHandler();
+            httphandler.UseDefaultCredentials = true;
+            using (HttpClient client = new HttpClient(httphandler))
+            {
+                client.BaseAddress = new Uri(APIURL);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                try
+                {
+                    string postBody = JsonConvert.SerializeObject(Apartment);
+                    var answer = client.PostAsync("api/AptLog", new StringContent(postBody, Encoding.UTF8, "application/json")).Result;
+                    if (answer.IsSuccessStatusCode)
+                        return true;
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
+
+            }
+            return false;
+        }
+        public static async Task<bool> LogFacilities(FacilitiesModel Facility)
+        {
+            HttpClientHandler httphandler2 = new HttpClientHandler();
+            httphandler2.UseDefaultCredentials = true;
+            using (HttpClient client = new HttpClient(httphandler2))
+            {
+                client.BaseAddress = new Uri(APIURL);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                try
+                {
+                    string postBody = JsonConvert.SerializeObject(Facility);
+                    var answer = client.PostAsync("api/FacLog", new StringContent(postBody, Encoding.UTF8, "application/json")).Result;
+                    if (answer.IsSuccessStatusCode)
+                        return true;
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
+
+            }
+            return false;
+        }
+
+        public static bool Log(object data)
+        {
+            Type datatype = data.GetType();
+            if(datatype==typeof(ResidentModel))
+            {
+                ResidentModel Resident = (ResidentModel)data;
+                return LogResident(Resident).Result;
+            }
+            else if (datatype == typeof(ApartmentModel))
+            {
+                ApartmentModel Apartment = (ApartmentModel)data;
+                return LogApartment(Apartment).Result;
+            }
+            else if (datatype == typeof(FacilitiesModel))
+            {
+                FacilitiesModel Facility = (FacilitiesModel)data;
+                return LogFacilities(Facility).Result;
+            }
+            return false;
+
+        }
+
+        public static async void SaveUser(ResidentModel User)
+        {
+            if(User.IsActive==true)
+                User.IsActive = false; //LATER USE IN BOARD APPROVAL
+            HttpClientHandler httphandler = new HttpClientHandler();
+            httphandler.UseDefaultCredentials = true;
+            using (HttpClient client = new HttpClient(httphandler))
+            {
+                client.BaseAddress = new Uri(APIURL);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                try
+                {
+                    string postBody = JsonConvert.SerializeObject(User);
+ //                   var answer = client.PostAsync("api/Residents_unapproved", new StringContent(postBody, Encoding.UTF8, "application/json")).Result;
+                    if (Log(User))
+                    {
+                        new MessageDialog("Save succesful, the changes will be made after approval").ShowAsync();
+                    }
+                    else
+                        new MessageDialog("Save failed.").ShowAsync();
+                }
+                catch (Exception ex)
+                {
+                    new MessageDialog(ex.Message).ShowAsync();
+                }
+            }
+        }
+
         public static List<ResidentModel> GetPeople(int Parent_Resident)
         {
 

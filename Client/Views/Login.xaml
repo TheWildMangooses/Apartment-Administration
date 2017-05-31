@@ -10,7 +10,7 @@
     
 
 
-    <Grid Background="{ThemeResource PivotNavButtonPressedBorderThemeBrush}" Margin="0,0,0,10">
+    <Grid Background="{ThemeResource PivotNavButtonPressedBorderThemeBrush}" >
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
@@ -25,11 +25,11 @@
             <StackPanel  Grid.Row="1" Padding="0" Canvas.Left="252" Canvas.Top="10" VerticalAlignment="Center" HorizontalAlignment="Center">
                 <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding Username, Mode=TwoWay}" VerticalAlignment="Top" Width="270"/>
                 <PasswordBox HorizontalAlignment="Center" Password="{Binding Password, Mode=TwoWay}" VerticalAlignment="Center" Width="270" Margin="0,18,0,4"/>
-                <Button Content="Login" Command="{Binding Login}" HorizontalAlignment="Center" Margin="10,23,0,15" VerticalAlignment="Center" Height="40" Width="267" Foreground="White"/>
-                <HyperlinkButton Content="Reset my password" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Bottom" FontWeight="Bold" Width="263" VerticalContentAlignment="Bottom"/>
+                <Button Content="Login" Command="{Binding Login}" HorizontalAlignment="Center" Margin="10,23,0,15" VerticalAlignment="Center" Height="40" Width="279" Foreground="White"/>
+                <HyperlinkButton Content="Reset my password" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Bottom" FontWeight="Bold" Width="273" VerticalContentAlignment="Bottom"/>
 
             </StackPanel>
-            <Image HorizontalAlignment="Left" Height="132" VerticalAlignment="Top" Width="166" Source="ms-appx:///Assets/logo.png" Canvas.Left="300" Canvas.Top="-160" />
+            <Image HorizontalAlignment="Left" Height="132" VerticalAlignment="Top" Width="185" Source="ms-appx:///Assets/logo.png" Canvas.Left="300" Canvas.Top="-160" />
         </Canvas>
 
     </Grid>
