@@ -16,7 +16,7 @@ namespace Client.View_Models
     public class StateViewModel : INotifyPropertyChanged
     {
 
-
+        //AGATA
        public GenericSingleton StateSingleton { get; set; }
 
         private ICommand _login { get; set; }

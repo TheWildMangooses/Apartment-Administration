@@ -13,6 +13,7 @@ namespace Client.Handlers
 {
     public class StateHandler
     {
+        //AGATA
         public StateViewModel StateViewModel { get; set; }
 
         public StateHandler(StateViewModel _stateviewmodel)

@@ -122,14 +122,20 @@
     <Compile Include="Views\AccountCreationBoardMember.xaml.cs">
       <DependentUpon>AccountCreationBoardMember.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ApartmentApproval.xaml.cs">
+      <DependentUpon>ApartmentApproval.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ApartmentView.xaml.cs">
       <DependentUpon>ApartmentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ApartmentViewBoard.xaml.cs">
+      <DependentUpon>ApartmentViewBoard.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\BoardMView.xaml.cs">
       <DependentUpon>BoardMView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\EditAddResidents.xaml.cs">
-      <DependentUpon>EditAddResidents.xaml</DependentUpon>
+    <Compile Include="Views\EditResidentUserMode.xaml.cs">
+      <DependentUpon>EditResidentUserMode.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Facilities.xaml.cs">
       <DependentUpon>Facilities.xaml</DependentUpon>
@@ -144,11 +150,20 @@
     <Compile Include="Views\PasswordRecover.xaml.cs">
       <DependentUpon>PasswordRecover.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Register.xaml.cs">
-      <DependentUpon>Register.xaml</DependentUpon>
+    <Compile Include="Views\RegisterResidentBoard.xaml.cs">
+      <DependentUpon>RegisterResidentBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ResidentApproval.xaml.cs">
+      <DependentUpon>ResidentApproval.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ResidentsView.xaml.cs">
       <DependentUpon>ResidentsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ResidentsViewBoard.xaml.cs">
+      <DependentUpon>ResidentsViewBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserCreateBoard.xaml.cs">
+      <DependentUpon>UserCreateBoard.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\UserView.xaml.cs">
       <DependentUpon>UserView.xaml</DependentUpon>
@@ -182,7 +197,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\ApartmentApproval.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ApartmentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ApartmentViewBoard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -190,7 +213,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\EditAddResidents.xaml">
+    <Page Include="Views\EditResidentUserMode.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -210,11 +233,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Register.xaml">
+    <Page Include="Views\RegisterResidentBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ResidentApproval.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ResidentsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ResidentsViewBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserCreateBoard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

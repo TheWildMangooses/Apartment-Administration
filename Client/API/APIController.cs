@@ -22,7 +22,7 @@ namespace Client.API
        
 
         private const string APIURL = "http://rest20170524020051.azurewebsites.net";
-        public static UserModel CheckLogin(string username,string password)
+        public static UserModel CheckLogin(string username,string password) //AGATA
         {
             
             HttpClientHandler httphandler = new HttpClientHandler();
@@ -89,7 +89,7 @@ namespace Client.API
 
         }
 
-        public static async Task<bool> LogResident(ResidentModel Resident)
+        public static async Task<bool> LogResident(ResidentModel Resident) //FELIX
         {
 
             HttpClientHandler httphandler = new HttpClientHandler();
@@ -101,7 +101,7 @@ namespace Client.API
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 try
                 {
-                    string postBody = JsonConvert.SerializeObject(Resident, Formatting.None, new IsoDateTimeConverter() { DateTimeFormat = "yyyy-MM-dd" });
+                    string postBody = JsonConvert.SerializeObject(Resident, Formatting.None);
                     var answer = client.PostAsync("api/ResidentsLog", new StringContent(postBody, Encoding.UTF8, "application/json")).Result;
                     if (answer.IsSuccessStatusCode)
                         return true;
@@ -166,7 +166,7 @@ namespace Client.API
         public static bool Log(object data)
         {
             Type datatype = data.GetType();
-            if(datatype==typeof(ResidentModel))
+            if(datatype==typeof(ResidentModel)) //felix
             {
                 ResidentModel Resident = (ResidentModel)data;
                 return LogResident(Resident).Result;
@@ -185,7 +185,7 @@ namespace Client.API
 
         }
 
-        public static async void SaveUser(ResidentModel User)
+        public static async void SaveUser(ResidentModel User) //FELIX
         {
             if(User.IsActive==true)
                 User.IsActive = false; //LATER USE IN BOARD APPROVAL

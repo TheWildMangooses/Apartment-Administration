@@ -21,7 +21,7 @@ namespace Client.Handlers
         public ResidentHandler(ResidentViewModel _viewmodel) {
             ResidentViewModel = _viewmodel;
         }
-        public async Task<ObservableCollection<ResidentModel>> GetCoResidents(int Parent_Resident)
+        public async Task<ObservableCollection<ResidentModel>> GetCoResidents(int Parent_Resident) //FELIX
         {
             return new ObservableCollection<ResidentModel>(APIController.GetPeople(Parent_Resident));
         }

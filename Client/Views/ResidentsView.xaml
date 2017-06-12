@@ -15,7 +15,7 @@
             <View_Models:ResidentViewModel/>
         </Grid.DataContext>
 
-
+<!-- FELIX -->
         <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
             <SplitView x:Name="SplitView" 
                 DisplayMode="CompactOverlay" 

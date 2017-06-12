@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace Client.View_Models
 {
-    public class ResidentViewModel : INotifyPropertyChanged
+    public class ResidentViewModel : INotifyPropertyChanged //FELIX
     {
         public GenericSingleton StateSingleton { get; set; }
         
@@ -27,7 +27,7 @@ namespace Client.View_Models
             StateSingleton = GenericSingleton.Instance;
             CurrentResident = StateSingleton.Resident;
             ResidentHandler = new ResidentHandler(this);
-            Cohabitants = new ObservableCollection<ResidentModel>();
+//            Cohabitants = new ObservableCollection<ResidentModel>();
             Cohabitants = ResidentHandler.GetCoResidents(CurrentResident.R_No).Result;
 
         }

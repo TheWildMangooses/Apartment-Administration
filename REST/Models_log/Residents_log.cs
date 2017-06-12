@@ -39,6 +39,7 @@ namespace REST.Models_log
         public bool? IsActive { get; set; }
 
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int PKEY { get; set; }
     }
 }
