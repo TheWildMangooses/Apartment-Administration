@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,7 @@ namespace Client.Model
         private int _no_rooms;
         private int _bbr;
         private int _fordelingstal;
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         private byte _ap_drawing;
         private decimal _rent;
         private byte _uploaded_doc;
@@ -38,6 +40,7 @@ namespace Client.Model
             public int No_Rooms { get { return _no_rooms; }set { _no_rooms = value; } }
             public int BBR { get { return _bbr; } set { _bbr = value; } }
             public int Fordelingstal { get { return _fordelingstal; } set { _fordelingstal = value; } }
+            [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
             public byte Ap_Drawing { get { return _ap_drawing; } set { _ap_drawing = value; } }
             public decimal Rent { get { return _rent; } set { _rent = value; } }
             public byte Uploaded_Doc { get { return _uploaded_doc; } set { _uploaded_doc = value; } }

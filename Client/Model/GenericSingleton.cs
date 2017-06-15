@@ -11,7 +11,13 @@ namespace Client.Model
     {
         private static UserModel _user { get; set; }
         private static ResidentModel _resident { get; set; }
+        private static ApartmentModel _apartment { get; set; }
 
+        public ApartmentModel Apartment
+        {
+            get { return _apartment; }
+            set { _apartment = value; }
+        }
         public UserModel User
         {
             get { return _user; }

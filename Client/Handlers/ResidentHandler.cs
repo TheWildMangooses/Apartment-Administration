@@ -11,6 +11,7 @@ using Windows.UI.Popups;
 using Client.Common;
 using Windows.Storage.Pickers;
 using Windows.Storage;
+using Client.Views;
 using System.Collections.ObjectModel;
 
 namespace Client.Handlers
@@ -24,6 +25,14 @@ namespace Client.Handlers
         public async Task<ObservableCollection<ResidentModel>> GetCoResidents(int Parent_Resident) //FELIX
         {
             return new ObservableCollection<ResidentModel>(APIController.GetPeople(Parent_Resident));
+        }
+        public void DeleteCoresident()
+        {
+            ResidentViewModel.Cohabitants.RemoveAt(0);
+        }
+        public async void EditCoresident()
+        {
+
         }
     }
 }

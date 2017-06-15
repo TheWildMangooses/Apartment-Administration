@@ -32,13 +32,14 @@ namespace Client.Handlers
                     //                   StateViewModel.CurrentLoggedUser = check;
                     StateViewModel.StateSingleton.User = check;
                     StateViewModel.StateSingleton.Resident = APIController.GetOwner(check.R_No);
+                    StateViewModel.StateSingleton.Apartment = APIController.GetApartment(StateViewModel.StateSingleton.Resident.Ap_No);
                     DecideNextView(false);
                 }
                 else
                 {
                     StateViewModel.StateSingleton.User = check;
                     StateViewModel.StateSingleton.Resident = APIController.GetOwner(check.R_No);
-                    DecideNextView(false);
+                    DecideNextView(true);
                 }
             }
         }

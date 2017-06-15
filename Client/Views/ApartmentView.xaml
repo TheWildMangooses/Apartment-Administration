@@ -6,7 +6,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:View_Models="using:Client.View_Models"
     x:Class="Client.Views.ApartmentView"
-    mc:Ignorable="d" Width="Auto">
+    mc:Ignorable="d" Width="700" Height="575">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -15,10 +15,10 @@
                 DisplayMode="CompactOverlay" 
                 OpenPaneLength="249" 
                 CompactPaneLength="100" 
-                HorizontalAlignment="Left" Width="75" Height="640">
+                HorizontalAlignment="Left" Width="75" Height="525">
                 <SplitView.Pane>
                     <ListBox SelectionMode="Single" 
-                        x:Name="IconsListBox" HorizontalAlignment="Left" VerticalAlignment="Center" Height="640" Width="75" HorizontalContentAlignment="Left">
+                        x:Name="IconsListBox" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="575" Width="75" HorizontalContentAlignment="Left" Margin="0,0,0,-50">
                         <ListBoxItem x:Name="LogOut" HorizontalContentAlignment="Center" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="75" GotFocus="LogOut_GotFocus" Margin="0,0,0,125">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE72D;" Height="38" Width="35" HorizontalAlignment="Center" VerticalAlignment="Center" />
@@ -54,5 +54,25 @@
                 </SplitView.Pane>
             </SplitView>
         </StackPanel>
+        <Grid HorizontalAlignment="Left" Height="575" Margin="75,0,0,0" VerticalAlignment="Top" Width="625">
+            <Image x:Name="apartment_image" HorizontalAlignment="Left" Height="237" Margin="10,110,0,0" VerticalAlignment="Top" Width="255"/>
+            <Grid HorizontalAlignment="Left" Height="202" Margin="305,145,0,0" VerticalAlignment="Top" Width="310">
+                <TextBlock x:Name="aparment_id_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Apartment ID:" VerticalAlignment="Top" Height="24" Width="95"/>
+                <TextBlock x:Name="Address" HorizontalAlignment="Left" Margin="0,48,0,0" TextWrapping="Wrap" Text="Address:" VerticalAlignment="Top" Height="24" Width="95" RenderTransformOrigin="0.526,2.917"/>
+                <TextBlock x:Name="aparment_id" HorizontalAlignment="Left" Margin="115,0,0,0" TextWrapping="Wrap" Text="{Binding Apartment.Ap_No,Mode=OneWay}" VerticalAlignment="Top" Height="24" Width="95"/>
+                <TextBlock x:Name="floor" HorizontalAlignment="Left" Margin="0,72,0,0" TextWrapping="Wrap" Text="Floor Number:" VerticalAlignment="Top" Height="24" Width="115" RenderTransformOrigin="0.526,2.917"/>
+                <TextBlock x:Name="Buildingid" HorizontalAlignment="Left" Margin="0,101,0,0" TextWrapping="Wrap" Text="Building ID:" VerticalAlignment="Top" Height="24" Width="95" RenderTransformOrigin="0.526,2.917"/>
+                <TextBlock x:Name="Rent" HorizontalAlignment="Left" Margin="0,125,0,0" TextWrapping="Wrap" Text="Rent:" VerticalAlignment="Top" Height="24" Width="95" RenderTransformOrigin="0.526,2.917"/>
+                <TextBlock x:Name="Size" HorizontalAlignment="Left" Margin="0,149,0,0" TextWrapping="Wrap" Text="Size:" VerticalAlignment="Top" Height="24" Width="95" RenderTransformOrigin="0.526,2.917"/>
+                <TextBlock x:Name="Address_Copy" HorizontalAlignment="Left" Margin="115,48,0,0" TextWrapping="Wrap" Text="{Binding Apartment.Address,Mode=OneWay}" VerticalAlignment="Top" Height="24" Width="95" RenderTransformOrigin="0.526,2.917"/>
+                <TextBlock x:Name="floor_Copy" HorizontalAlignment="Left" Margin="115,72,0,0" TextWrapping="Wrap" Text="{Binding Apartment.Floor,Mode=OneWay}" VerticalAlignment="Top" Height="19" Width="95" RenderTransformOrigin="0.526,2.917"/>
+                <TextBlock x:Name="Buildingid_Copy" HorizontalAlignment="Left" Margin="115,101,0,0" TextWrapping="Wrap" Text="{Binding Apartment.B_No}" VerticalAlignment="Top" Height="24" Width="95" RenderTransformOrigin="0.526,2.917"/>
+                <TextBlock x:Name="Rent_Copy" HorizontalAlignment="Left" Margin="95,130,0,0" TextWrapping="Wrap" Text="{Binding Apartment.Rent,Mode=OneWay}" VerticalAlignment="Top" Height="24" Width="95" RenderTransformOrigin="0.526,2.917"/>
+                <TextBlock x:Name="Size_Copy" HorizontalAlignment="Left" Margin="95,149,0,0" TextWrapping="Wrap" Text="{Binding Apartment.Size,Mode=OneWay}" VerticalAlignment="Top" Height="24" Width="95" RenderTransformOrigin="0.526,2.917"/>
+            </Grid>
+
+
+
+        </Grid>
     </Grid>
 </Page>

@@ -75,7 +75,7 @@ namespace REST.Controllers
         [ResponseType(typeof(Residents_log))]
         public async Task<IHttpActionResult> PostResidents_log(Residents_log residents_log)
         {
-            residents_log.PKEY = 0;
+            //;;;residents_log.PKEY = 0;
 
             if (!ModelState.IsValid)
             {

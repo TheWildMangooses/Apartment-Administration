@@ -1,5 +1,6 @@
 ﻿using Client.Annotations;
 using Client.API;
+using Client.Common;
 using Client.Handlers;
 using Client.Model;
 using System;
@@ -10,11 +11,33 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace Client.View_Models
 {
     public class ResidentViewModel : INotifyPropertyChanged //FELIX
     {
+
+
+        private ICommand _delete { get; set; }
+        public ICommand Delete
+        {
+            get { return _delete; }
+            set { _delete = value; }
+        }
+        private ICommand _add { get; set; }
+        public ICommand Add
+        {
+            get { return _add; }
+            set { _add = value; }
+        }
+        private ICommand _edit { get; set; }
+        public ICommand Edit
+        {
+            get { return _edit; }
+            set { _edit = value; }
+        }
+
         public GenericSingleton StateSingleton { get; set; }
         
         public ResidentHandler ResidentHandler;
@@ -29,6 +52,7 @@ namespace Client.View_Models
             ResidentHandler = new ResidentHandler(this);
 //            Cohabitants = new ObservableCollection<ResidentModel>();
             Cohabitants = ResidentHandler.GetCoResidents(CurrentResident.R_No).Result;
+//            Add = new RelayCommand(ResidentHandler.);
 
         }
 

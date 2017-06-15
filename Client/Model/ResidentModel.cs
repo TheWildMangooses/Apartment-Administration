@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,7 @@ namespace Client.Model
         private DateTime _m_in;
         private DateTime _m_out;
         private bool _isowner;
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         private byte[] _image;
         private int _parent_Resident;
         private bool _isactive;
@@ -33,6 +35,7 @@ namespace Client.Model
         public string Name { get { return _name; } set { _name = value; } }
         public int Parent_Resident { get { return _parent_Resident; } set { _parent_Resident = value; } }
         public int Phone_No { get { return _phone_no; } set { _phone_no = value; } }
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public byte[] Picture { get { return _image; } set { _image = value; } }
         public int R_No { get { return _r_no; } set { _r_no = value; } }  
         public bool IsActive { get { return _isactive; } set { _isactive = value; } }

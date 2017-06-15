@@ -10,6 +10,7 @@ namespace REST.Models_log
         public LogDataContext()
             : base("name=LogDataContext")
         {
+            base.Configuration.ProxyCreationEnabled = false;
         }
 
         public virtual DbSet<Apartments_log> Apartments_log { get; set; }

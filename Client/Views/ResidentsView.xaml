@@ -73,9 +73,9 @@
                 </ListBox>
 
             </StackPanel>
-            <Button x:Name="button" Content="Add cohabitant" HorizontalAlignment="Center" VerticalAlignment="Center" Height="55" Margin="495,615,495,40" Width="215"/>
-            <Button x:Name="edit_cohabitant" Content="Edit cohabitant" HorizontalAlignment="Center" VerticalAlignment="Center" Height="55" Margin="770,615,220,40" Width="215"/>
-            <Button x:Name="delete_cohabitant" Content="Delete cohabitant" HorizontalAlignment="Center" VerticalAlignment="Center" Height="55" Margin="215,615,775,40" Width="215"/>
+            <Button x:Name="button" Content="Add cohabitant" HorizontalAlignment="Center" VerticalAlignment="Center" Height="55" Margin="495,615,495,40" Width="215" Command="{Binding Add}"/>
+            <Button x:Name="edit_cohabitant" Content="Edit cohabitant" HorizontalAlignment="Center" VerticalAlignment="Center" Height="55" Margin="770,615,220,40" Width="215" Command="{Binding Edit}"/>
+            <Button x:Name="delete_cohabitant" Click="delete_cohabitant_Click" Content="Delete cohabitant" HorizontalAlignment="Center" VerticalAlignment="Center" Height="55" Margin="215,615,775,40" Width="215" Command="{Binding Delete}"/>
         </Grid>
 
     </Grid>

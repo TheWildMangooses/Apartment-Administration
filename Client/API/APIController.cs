@@ -102,7 +102,7 @@ namespace Client.API
                 try
                 {
                     string postBody = JsonConvert.SerializeObject(Resident, Formatting.None);
-                    var answer = client.PostAsync("api/ResidentsLog", new StringContent(postBody, Encoding.UTF8, "application/json")).Result;
+                    var answer = client.PostAsync("api/ResidentsLog/", new StringContent(postBody, Encoding.UTF8, "application/json")).Result;
                     if (answer.IsSuccessStatusCode)
                         return true;
                 }
@@ -126,7 +126,7 @@ namespace Client.API
                 try
                 {
                     string postBody = JsonConvert.SerializeObject(Apartment);
-                    var answer = client.PostAsync("api/AptLog", new StringContent(postBody, Encoding.UTF8, "application/json")).Result;
+                    var answer = client.PostAsync("api/AptLog/", new StringContent(postBody, Encoding.UTF8, "application/json")).Result;
                     if (answer.IsSuccessStatusCode)
                         return true;
                 }
@@ -150,7 +150,7 @@ namespace Client.API
                 try
                 {
                     string postBody = JsonConvert.SerializeObject(Facility);
-                    var answer = client.PostAsync("api/FacLog", new StringContent(postBody, Encoding.UTF8, "application/json")).Result;
+                    var answer = client.PostAsync("api/FacLog/", new StringContent(postBody, Encoding.UTF8, "application/json")).Result;
                     if (answer.IsSuccessStatusCode)
                         return true;
                 }
@@ -166,7 +166,7 @@ namespace Client.API
         public static bool Log(object data)
         {
             Type datatype = data.GetType();
-            if(datatype==typeof(ResidentModel)) //felix
+            if(datatype==typeof(ResidentModel)) //FELIX
             {
                 ResidentModel Resident = (ResidentModel)data;
                 return LogResident(Resident).Result;
@@ -198,7 +198,7 @@ namespace Client.API
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 try
                 {
-                    string postBody = JsonConvert.SerializeObject(User);
+                    //string postBody = JsonConvert.SerializeObject(User);
  //                   var answer = client.PostAsync("api/Residents_unapproved", new StringContent(postBody, Encoding.UTF8, "application/json")).Result;
                     if (Log(User))
                     {
@@ -246,8 +246,64 @@ namespace Client.API
             }
 
         }
+        public static ApartmentModel GetApartment(int Ap_No)
+        {
+            HttpClientHandler httphandler = new HttpClientHandler();
+            httphandler.UseDefaultCredentials = true;
+            using (HttpClient client = new HttpClient(httphandler))
+            {
+                client.BaseAddress = new Uri(APIURL);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                try
+                {
+                    var answer = client.GetAsync("api/Apartments/" + Ap_No + "/").Result;
+                    if (answer.IsSuccessStatusCode)
+                    {
+ //                       if(answer.Content.ReadAsAsync<ApartmentModel>().Result.Ap_Drawing==null) 
+                        var Apartment = answer.Content.ReadAsAsync<ApartmentModel>().Result;
 
-        
+                        return Apartment;
+                    }
+
+                    else
+                        return null;
+                }
+                catch (Exception ex)
+                {
+                    new MessageDialog(ex.Message).ShowAsync();
+                    return null;
+                }
+                return null;
+            }
+        }
+
+
+        public static async Task<bool> CreateUser(UserModel User)
+        {
+            HttpClientHandler httphandler2 = new HttpClientHandler();
+            httphandler2.UseDefaultCredentials = true;
+            using (HttpClient client = new HttpClient(httphandler2))
+            {
+                client.BaseAddress = new Uri(APIURL);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                try
+                {
+                    string postBody = JsonConvert.SerializeObject(User);
+                    var answer = client.PostAsync("api/User", new StringContent(postBody, Encoding.UTF8, "application/json")).Result;
+                    if (answer.IsSuccessStatusCode)
+                        return true;
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
+
+            }
+            return false;
+        }
+
 
     }
 }

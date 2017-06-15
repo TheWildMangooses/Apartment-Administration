@@ -6,7 +6,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:View_Models="using:Client.View_Models"
     x:Class="Client.Views.Login"
-    mc:Ignorable="d" Height="689.333" Width="797" >
+    mc:Ignorable="d" Height="689.333" Width="797" Background="{ThemeResource PivotNavButtonPressedBorderThemeBrush}" >
+    
     
 <!-- AGATA -->
 

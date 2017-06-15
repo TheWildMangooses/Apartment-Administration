@@ -49,5 +49,12 @@ namespace Client.Views
         {
             App.NavService.NavigateTo(typeof(ResidentsView), null);
         }
+
+        private void delete_cohabitant_Click(object sender, RoutedEventArgs e)
+        {
+    
+            
+
+        }
     }
 }
